@@ -1,0 +1,19 @@
+{
+  "name": "x-devsecops",
+  "description": "Universal DevSecOps knowledge skills. Security, testing, CI/CD, monitoring - language-agnostic best practices for the complete software lifecycle. Works with any skills.sh compatible AI agent.",
+  "version": "1.0.0",
+  "author": { "name": "ccsetup contributors" },
+  "license": "Apache-2.0",
+  "skills": "skills/**/*.md",
+  "keywords": [
+    "devsecops",
+    "security",
+    "testing",
+    "ci-cd",
+    "solid",
+    "owasp",
+    "quality",
+    "knowledge",
+    "best-practices"
+  ]
+}

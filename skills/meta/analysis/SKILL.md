@@ -1,0 +1,118 @@
+---
+name: analysis
+description: |
+  Pareto 80/20 analysis and prioritization frameworks. Decision making, trade-offs.
+  Activate when prioritizing work, analyzing requirements, or making technical decisions.
+  Triggers: analysis, prioritize, pareto, 80/20, trade-off, decision, evaluate.
+license: Apache-2.0
+compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
+allowed-tools: Read Grep Glob
+metadata:
+  author: ccsetup contributors
+  version: "1.0.0"
+  category: meta
+---
+
+# Analysis
+
+Prioritization and decision-making frameworks.
+
+## Pareto Principle (80/20)
+
+**20% of effort produces 80% of value**
+
+| Application | Focus On |
+|-------------|----------|
+| Features | High-impact functionality |
+| Bugs | Most reported issues |
+| Tests | Critical paths |
+| Performance | Biggest bottlenecks |
+
+## Priority Matrix
+
+| Priority | Impact | Effort | Action |
+|----------|--------|--------|--------|
+| P1 | High | Low | Do first |
+| P2 | High | High | Plan carefully |
+| P3 | Low | Low | Quick wins |
+| P4 | Low | High | Deprioritize |
+
+## Analysis Framework
+
+### 1. Define the Problem
+- What exactly needs to be solved?
+- Who is affected?
+- What's the impact of not solving it?
+
+### 2. Gather Data
+- Current metrics
+- User feedback
+- Technical constraints
+
+### 3. Identify Options
+- List all approaches
+- Include "do nothing"
+
+### 4. Evaluate Trade-offs
+| Option | Pros | Cons | Risk |
+|--------|------|------|------|
+| A | ... | ... | ... |
+| B | ... | ... | ... |
+
+### 5. Decide and Document
+- Clear recommendation
+- Reasoning documented
+- Rollback plan
+
+## Trade-off Analysis
+
+| Dimension | Trade-off |
+|-----------|-----------|
+| Speed vs Quality | Ship fast vs polish |
+| Build vs Buy | Control vs time-to-market |
+| Flexibility vs Simplicity | Generic vs specific |
+| Consistency vs Innovation | Standard vs new approach |
+
+## Quick Wins Identification
+
+Criteria for quick wins:
+- [ ] Low implementation effort
+- [ ] High user impact
+- [ ] Low risk of regression
+- [ ] Independent of other work
+- [ ] Clear success criteria
+
+## Decision Documentation
+
+```markdown
+# Decision: [Title]
+
+## Context
+What's the situation requiring a decision?
+
+## Options Considered
+1. Option A - description
+2. Option B - description
+
+## Decision
+We chose [option] because [reasoning].
+
+## Consequences
+- Positive: [benefits]
+- Negative: [costs/risks]
+- Neutral: [observations]
+```
+
+## Checklist
+
+- [ ] Problem clearly defined
+- [ ] Stakeholders identified
+- [ ] Options listed (including "do nothing")
+- [ ] Trade-offs evaluated
+- [ ] Decision documented
+- [ ] Success criteria defined
+
+## When to Load References
+
+- **For ADR templates**: See `references/adr-template.md`
+- **For prioritization frameworks**: See `references/prioritization.md`
