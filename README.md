@@ -6,6 +6,18 @@ Universal DevSecOps knowledge skills for AI-assisted development.
 
 x-devsecops provides **domain knowledge** skills - the "WHAT to know" about software development best practices. These skills are agent-agnostic and work with any skills.sh compatible AI agent.
 
+## Architecture
+
+x-devsecops is part of the **ccsetup 3-repository architecture** ("Swiss Watch" design):
+
+| Repository | Role | Description |
+|------------|------|-------------|
+| **x-devsecops** | WHAT to know | 26 knowledge skills (domain expertise) ← *You are here* |
+| **x-workflows** | HOW to work | 19 workflow skills (development processes) |
+| **ccsetup** | Orchestration | Commands, agents, hooks |
+
+For complete architectural documentation, see [ccsetup/ARCHITECTURE.md](https://github.com/clmusic/ccsetup/blob/main/ARCHITECTURE.md)
+
 ## Skills Catalog
 
 ### Code (5 skills)
