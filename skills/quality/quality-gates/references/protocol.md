@@ -204,10 +204,8 @@ Gates should NEVER be skipped except:
 
 ## References
 
-- @skills/code-quality/SKILL.md - Full skill documentation
-- @core-docs/testing/testing-pyramid.md - Testing distribution
-- @core-docs/principles/solid.md - SOLID principles
-- @core-docs/testing/coverage-strategies.md - Coverage strategies
+- @skills/code-code-quality/ - SOLID principles
+- @skills/quality-testing/ - Testing pyramid and coverage strategies
 
 ---
 

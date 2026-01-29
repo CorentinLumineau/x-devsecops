@@ -98,3 +98,11 @@ Master these three (80% of vulnerabilities):
 - **For injection examples**: See `references/injection-prevention.md`
 - **For security headers**: See `references/security-headers.md`
 - **For detailed A01-A10**: See `references/owasp-details.md`
+
+---
+
+## Related Skills
+
+- **[input-validation](../input-validation/SKILL.md)** - Primary defense against injection attacks (A03)
+- **[authentication](../authentication/SKILL.md)** - Identification and authentication failures (A07)
+- **[supply-chain](../supply-chain/SKILL.md)** - Vulnerable and outdated components (A06)

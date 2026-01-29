@@ -94,3 +94,11 @@ const secret = process.env.JWT_SECRET
 - **For vault setup**: See `references/vault-setup.md`
 - **For rotation patterns**: See `references/rotation.md`
 - **For CI/CD secrets**: See `references/cicd-secrets.md`
+
+---
+
+## Related Skills
+
+- **[authentication](../authentication/SKILL.md)** - Credentials and tokens that need secure storage
+- **[container-security](../container-security/SKILL.md)** - Secrets injection in container runtimes
+- **[compliance](../compliance/SKILL.md)** - Regulatory requirements for key management

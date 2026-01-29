@@ -93,3 +93,11 @@ Regulatory frameworks and implementation requirements.
 - **For SOC 2 controls**: See `references/soc2-controls.md`
 - **For GDPR implementation**: See `references/gdpr-implementation.md`
 - **For audit preparation**: See `references/audit-checklist.md`
+
+---
+
+## Related Skills
+
+- **[authorization](../authorization/SKILL.md)** - Access control required by most compliance frameworks
+- **[secrets](../secrets/SKILL.md)** - Secrets management for regulatory data protection
+- **[supply-chain](../supply-chain/SKILL.md)** - SBOM and dependency compliance requirements

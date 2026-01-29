@@ -98,3 +98,11 @@ These strategies prevent 80% of injection vulnerabilities:
 - **For SQL injection patterns**: See `references/sql-injection.md`
 - **For XSS prevention**: See `references/xss-prevention.md`
 - **For file upload security**: See `references/file-upload.md`
+
+---
+
+## Related Skills
+
+- **[owasp](../owasp/SKILL.md)** - A03:2021 Injection relies on input validation
+- **[authentication](../authentication/SKILL.md)** - Validate auth inputs to prevent credential attacks
+- **[authorization](../authorization/SKILL.md)** - Input tampering can bypass authorization

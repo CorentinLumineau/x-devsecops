@@ -96,3 +96,11 @@ grype sbom:./sbom.json
 - **For SLSA implementation**: See `references/slsa-levels.md`
 - **For scanning setup**: See `references/dependency-scanning.md`
 - **For SBOM generation**: See `references/sbom-guide.md`
+
+---
+
+## Related Skills
+
+- **[container-security](../container-security/SKILL.md)** - Base image vulnerability scanning
+- **[owasp](../owasp/SKILL.md)** - A06:2021 Vulnerable and outdated components
+- **[compliance](../compliance/SKILL.md)** - SBOM requirements for regulatory compliance

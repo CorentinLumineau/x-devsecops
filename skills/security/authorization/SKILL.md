@@ -100,3 +100,11 @@ if (resource.ownerId !== currentUser.id) {
 - **For RBAC implementation**: See `references/rbac-patterns.md`
 - **For ABAC policies**: See `references/abac-policies.md`
 - **For database schema**: See `references/auth-schema.md`
+
+---
+
+## Related Skills
+
+- **[authentication](../authentication/SKILL.md)** - Identity verification before authorization
+- **[input-validation](../input-validation/SKILL.md)** - Validate inputs to prevent privilege escalation
+- **[compliance](../compliance/SKILL.md)** - Regulatory access control requirements (SOC 2, GDPR)

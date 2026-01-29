@@ -40,7 +40,7 @@ Secrets:      <SECRET>, ${SECRET_KEY}, your-secret-here
 ### Reference Syntax
 ```markdown
 <!-- Cross-category reference -->
-See @skills/security/owasp for security context
+See @skills/security-owasp/ for security context
 
 <!-- External reference -->
 Reference: [OWASP Top 10](https://owasp.org/Top10/)

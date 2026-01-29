@@ -31,78 +31,22 @@ Injection attacks occur when untrusted data is sent to an interpreter as part of
 
 ### Pattern 1: SQL Injection Prevention
 
-**When to Use**: Any application using SQL databases
+**Primary Defense**: Parameterized queries (never string concatenation)
 
-**Implementation**:
 ```typescript
-// PARAMETERIZED QUERIES - Primary Defense
+// SECURE - parameterized query
+const [rows] = await db.execute('SELECT * FROM users WHERE id = ?', [userId]);
 
-// Node.js with mysql2
-import mysql from 'mysql2/promise';
-
-// WRONG - vulnerable
-async function getUserVulnerable(userId: string) {
-  const query = `SELECT * FROM users WHERE id = ${userId}`;
-  return db.query(query);
-  // Attack: userId = "1 OR 1=1" or "1; DROP TABLE users;--"
-}
-
-// CORRECT - parameterized
-async function getUser(userId: string) {
-  const query = 'SELECT * FROM users WHERE id = ?';
-  const [rows] = await db.execute(query, [userId]);
-  return rows[0];
-}
-
-// CORRECT - named parameters
-async function getUserByEmail(email: string) {
-  const query = 'SELECT * FROM users WHERE email = :email AND status = :status';
-  const [rows] = await db.execute(query, { email, status: 'active' });
-  return rows[0];
-}
-
-// ORM - inherently safe
-import { PrismaClient } from '@prisma/client';
-const prisma = new PrismaClient();
-
-async function getUserPrisma(userId: string) {
-  return prisma.user.findUnique({
-    where: { id: userId }
-  });
-}
-
-// TypeORM - query builder is safe
-async function searchUsers(name: string) {
-  return getRepository(User)
-    .createQueryBuilder('user')
-    .where('user.name LIKE :name', { name: `%${name}%` })
-    .getMany();
-}
-
-// DYNAMIC IDENTIFIERS - whitelist approach
-async function sortUsers(sortBy: string, order: string) {
-  // Cannot parameterize table/column names
-  const allowedColumns = ['name', 'email', 'created_at'];
-  const allowedOrders = ['ASC', 'DESC'];
-
-  if (!allowedColumns.includes(sortBy)) {
-    throw new Error('Invalid sort column');
-  }
-  if (!allowedOrders.includes(order.toUpperCase())) {
-    throw new Error('Invalid sort order');
-  }
-
-  // Safe after whitelist validation
-  const query = `SELECT * FROM users ORDER BY ${sortBy} ${order}`;
-  return db.query(query);
-}
+// SECURE - ORM (inherently safe)
+return prisma.user.findUnique({ where: { id: userId } });
 ```
 
-**Anti-Pattern**: Template literals without parameterization
-```typescript
-// VULNERABLE - looks like parameterized but isn't
-const query = `SELECT * FROM users WHERE id = '${userId}'`;
-```
+**Comprehensive patterns**: See @skills/security-input-validation/references/sql-injection.md for:
+- ORM query builders (Prisma, TypeORM, Sequelize, Knex)
+- Dynamic table/column whitelisting
+- IN clause and LIKE clause handling
+- Stored procedures
+- Multi-language examples (TypeScript, Python, Go, Java)
 
 ### Pattern 2: NoSQL Injection Prevention
 

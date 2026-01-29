@@ -109,3 +109,11 @@ trivy config Dockerfile
 - **For Kubernetes security**: See `references/k8s-security.md`
 - **For scanning setup**: See `references/container-scanning.md`
 - **For runtime policies**: See `references/runtime-policies.md`
+
+---
+
+## Related Skills
+
+- **[supply-chain](../supply-chain/SKILL.md)** - Base image and dependency scanning
+- **[secrets](../secrets/SKILL.md)** - Secrets injection in container environments
+- **[compliance](../compliance/SKILL.md)** - Container runtime compliance policies

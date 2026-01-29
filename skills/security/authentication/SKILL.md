@@ -86,3 +86,11 @@ Cookie Settings:
 - **For JWT implementation**: See `references/jwt-patterns.md`
 - **For OAuth integration**: See `references/oauth-flows.md`
 - **For MFA setup**: See `references/mfa-implementation.md`
+
+---
+
+## Related Skills
+
+- **[authorization](../authorization/SKILL.md)** - Permission models after identity is verified
+- **[owasp](../owasp/SKILL.md)** - A07:2021 covers authentication failures
+- **[secrets](../secrets/SKILL.md)** - Credential storage and rotation for auth tokens
