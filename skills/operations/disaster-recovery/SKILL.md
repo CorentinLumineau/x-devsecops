@@ -1,9 +1,6 @@
 ---
 name: disaster-recovery
-description: |
-  RTO/RPO planning, backup strategies, failover patterns, and DR testing.
-  Activate when designing backup systems, planning failover, or building disaster recovery runbooks.
-  Triggers: disaster recovery, DR, RTO, RPO, backup, failover, business continuity, restore.
+description: RTO/RPO planning, backup strategies, failover patterns, and DR testing.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

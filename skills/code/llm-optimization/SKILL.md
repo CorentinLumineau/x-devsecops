@@ -1,9 +1,6 @@
 ---
 name: llm-optimization
-description: |
-  Best practices for LLM-assisted development. Prompting, context management, token efficiency.
-  Activate when working with AI assistants, writing prompts, or optimizing AI workflows.
-  Triggers: llm, ai, prompt, context, token, claude, gpt, assistant.
+description: Best practices for LLM-assisted development. Prompting, context management, token efficiency.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

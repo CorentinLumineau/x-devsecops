@@ -1,9 +1,6 @@
 ---
 name: caching
-description: |
-  Caching patterns, Redis, cache invalidation, and distributed caching strategies.
-  Activate when implementing caching, optimizing performance, or handling cache invalidation.
-  Triggers: cache, redis, memcached, ttl, invalidation, cdn, session, distributed.
+description: Caching patterns, Redis, cache invalidation, and distributed caching strategies.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

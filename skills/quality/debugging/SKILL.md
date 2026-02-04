@@ -1,9 +1,6 @@
 ---
 name: debugging
-description: |
-  Systematic debugging strategies with hypothesis-driven root cause analysis.
-  Activate when fixing bugs, investigating errors, or analyzing test failures.
-  Triggers: debug, bug, error, exception, stack trace, failing, broken, investigate.
+description: Systematic debugging strategies with hypothesis-driven root cause analysis.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

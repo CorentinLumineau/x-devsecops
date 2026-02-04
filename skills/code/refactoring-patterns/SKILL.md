@@ -1,9 +1,6 @@
 ---
 name: refactoring-patterns
-description: |
-  Fowler's refactoring catalog, extract/move/rename patterns, Strangler Fig, and safe refactoring techniques.
-  Activate when restructuring code, reducing tech debt, or migrating legacy systems.
-  Triggers: refactor, extract, rename, move, strangler, tech debt, code smell, restructure.
+description: Fowler's refactoring catalog and safe refactoring techniques.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

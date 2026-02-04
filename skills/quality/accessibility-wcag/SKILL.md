@@ -1,9 +1,6 @@
 ---
 name: accessibility-wcag
-description: |
-  WCAG 2.1/2.2 compliance and accessibility best practices.
-  Activate when building UIs, reviewing accessibility, or implementing ARIA patterns.
-  Triggers: accessibility, wcag, aria, a11y, screen reader, keyboard, focus, contrast.
+description: WCAG 2.1/2.2 compliance and accessibility best practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

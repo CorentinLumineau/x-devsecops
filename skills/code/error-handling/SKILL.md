@@ -1,9 +1,6 @@
 ---
 name: error-handling
-description: |
-  Error handling patterns and exception management. Fail fast, meaningful errors, recovery.
-  Activate when implementing error handling, exception catching, or error reporting.
-  Triggers: error, exception, try catch, throw, error handling, fail, recovery.
+description: Error handling patterns and exception management. Fail fast, meaningful errors, recovery.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

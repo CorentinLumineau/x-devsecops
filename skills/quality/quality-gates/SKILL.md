@@ -1,9 +1,6 @@
 ---
 name: quality-gates
-description: |
-  Quality gate checks for code validation. Types, lint, build, tests, coverage.
-  Activate when running validation, reviewing PRs, or before commits.
-  Triggers: quality gate, validation, lint, typecheck, build, pre-commit, ci.
+description: Quality gate checks for code validation. Types, lint, build, tests, coverage.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

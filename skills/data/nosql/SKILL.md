@@ -1,9 +1,6 @@
 ---
 name: nosql
-description: |
-  NoSQL database patterns for MongoDB, DynamoDB, and document modeling.
-  Activate when designing document schemas, choosing between SQL/NoSQL, or optimizing NoSQL queries.
-  Triggers: nosql, mongodb, dynamodb, document, collection, denormalization, embedded.
+description: NoSQL database patterns for MongoDB, DynamoDB, and document modeling.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

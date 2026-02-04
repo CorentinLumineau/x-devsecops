@@ -1,9 +1,6 @@
 ---
 name: ci-cd
-description: |
-  CI/CD pipeline patterns and automation. GitHub Actions, GitLab CI, build automation.
-  Activate when setting up pipelines, configuring builds, or automating deployments.
-  Triggers: ci, cd, pipeline, github actions, gitlab ci, build, deploy, automation.
+description: CI/CD pipeline patterns and automation. GitHub Actions, GitLab CI, build automation.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

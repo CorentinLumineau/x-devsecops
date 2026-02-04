@@ -1,9 +1,6 @@
 ---
 name: sdk-design
-description: |
-  SDK and API client design patterns, OpenAPI/GraphQL code generation, versioning.
-  Activate when designing SDKs, generating clients, or managing API client libraries.
-  Triggers: sdk, api client, codegen, openapi, graphql client, versioning, client library.
+description: SDK and API client design patterns, OpenAPI/GraphQL code generation, versioning.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

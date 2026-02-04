@@ -1,9 +1,6 @@
 ---
 name: feature-flags
-description: |
-  Feature flag patterns for progressive rollouts. Toggles, A/B testing, kill switches.
-  Activate when implementing feature toggles, gradual rollouts, or runtime configuration.
-  Triggers: feature flag, toggle, rollout, a/b test, experiment, kill switch.
+description: Feature flag patterns for progressive rollouts. Toggles, A/B testing, kill switches.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

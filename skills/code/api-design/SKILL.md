@@ -1,9 +1,6 @@
 ---
 name: api-design
-description: |
-  REST API and GraphQL design best practices. Resource naming, versioning, pagination.
-  Activate when designing APIs, creating endpoints, or reviewing API contracts.
-  Triggers: api, rest, graphql, endpoint, resource, http, openapi, swagger.
+description: REST API and GraphQL design best practices. Resource naming, versioning, pagination.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

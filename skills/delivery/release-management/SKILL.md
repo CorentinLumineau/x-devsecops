@@ -1,9 +1,6 @@
 ---
 name: release-management
-description: |
-  Release management and versioning. SemVer, changelog, safe git practices, tagging.
-  Activate when releasing versions, writing changelogs, or managing git workflows.
-  Triggers: release, version, semver, changelog, tag, git, branch, merge.
+description: Release management and versioning. SemVer, changelog, safe git practices, tagging.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

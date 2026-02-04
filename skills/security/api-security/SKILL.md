@@ -1,9 +1,6 @@
 ---
 name: api-security
-description: |
-  API security patterns for protecting web services and endpoints.
-  Activate when designing API auth, rate limiting, CORS, or input validation at API boundaries.
-  Triggers: api security, rate limiting, cors, api auth, oauth, jwt, api gateway, input validation.
+description: API security patterns for protecting web services and endpoints.
 license: Apache-2.0
 compatibility: claude-code
 allowed-tools: [Read, Grep, Glob]

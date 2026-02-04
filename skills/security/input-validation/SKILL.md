@@ -1,9 +1,6 @@
 ---
 name: input-validation
-description: |
-  Input validation and sanitization patterns to prevent injection attacks.
-  Activate when handling user input, form data, API parameters, or file uploads.
-  Triggers: validation, sanitization, input, form, user data, whitelist.
+description: Input validation and sanitization patterns to prevent injection attacks.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

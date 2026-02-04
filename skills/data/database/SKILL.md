@@ -1,9 +1,6 @@
 ---
 name: database
-description: |
-  Database design and optimization. Schema design, migrations, query optimization.
-  Activate when designing schemas, writing migrations, or optimizing queries.
-  Triggers: database, schema, migration, query, sql, index, postgres, mysql.
+description: Database design and optimization. Schema design, migrations, query optimization.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

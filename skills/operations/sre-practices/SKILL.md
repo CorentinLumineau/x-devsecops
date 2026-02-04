@@ -1,9 +1,6 @@
 ---
 name: sre-practices
-description: |
-  Site Reliability Engineering practices for production systems.
-  Activate when designing SLOs, managing error budgets, reducing toil, or running postmortems.
-  Triggers: sre, slo, sli, sla, error budget, toil, on-call, postmortem, reliability.
+description: Site Reliability Engineering practices for production systems.
 license: Apache-2.0
 compatibility: claude-code
 allowed-tools: [Read, Grep, Glob]

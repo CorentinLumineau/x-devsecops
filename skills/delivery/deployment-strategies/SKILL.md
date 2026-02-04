@@ -1,9 +1,6 @@
 ---
 name: deployment-strategies
-description: |
-  Deployment strategies for safe, zero-downtime releases.
-  Activate when planning deployments, configuring rollouts, or designing release processes.
-  Triggers: blue/green, canary, rolling update, deployment, rollback, A/B testing, release strategy.
+description: Deployment strategies for safe, zero-downtime releases.
 license: Apache-2.0
 compatibility: claude-code
 allowed-tools: [Read, Grep, Glob]

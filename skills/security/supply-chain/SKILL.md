@@ -1,9 +1,6 @@
 ---
 name: supply-chain
-description: |
-  Software supply chain security. Dependency scanning, SBOM, build security.
-  Activate when managing dependencies, configuring CI/CD, or reviewing third-party code.
-  Triggers: supply chain, dependency, npm audit, sbom, slsa, dependabot, snyk.
+description: Software supply chain security. Dependency scanning, SBOM, build security.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

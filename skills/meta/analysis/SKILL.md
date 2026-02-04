@@ -1,9 +1,6 @@
 ---
 name: analysis
-description: |
-  Pareto 80/20 analysis and prioritization frameworks. Decision making, trade-offs.
-  Activate when prioritizing work, analyzing requirements, or making technical decisions.
-  Triggers: analysis, prioritize, pareto, 80/20, trade-off, decision, evaluate.
+description: Pareto 80/20 analysis and prioritization frameworks. Decision making, trade-offs.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

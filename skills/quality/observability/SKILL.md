@@ -1,9 +1,6 @@
 ---
 name: observability
-description: |
-  Observability patterns covering the three pillars: logs, metrics, and traces.
-  Activate when implementing monitoring, setting up OpenTelemetry, or designing structured logging.
-  Triggers: observability, logging, metrics, tracing, opentelemetry, otel, structured logging, prometheus, grafana.
+description: Observability patterns covering the three pillars: logs, metrics, and traces.
 license: Apache-2.0
 compatibility: claude-code
 allowed-tools: [Read, Grep, Glob]

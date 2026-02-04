@@ -1,9 +1,6 @@
 ---
 name: monitoring
-description: |
-  Observability patterns. Metrics, logging, tracing, alerting, SLOs.
-  Activate when setting up monitoring, creating dashboards, or defining alerts.
-  Triggers: monitoring, observability, metrics, logging, tracing, alert, slo, prometheus.
+description: Observability patterns. Metrics, logging, tracing, alerting, SLOs.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

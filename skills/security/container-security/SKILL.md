@@ -1,9 +1,6 @@
 ---
 name: container-security
-description: |
-  Docker and container security best practices. Image hardening, runtime security.
-  Activate when building Docker images, configuring containers, or reviewing Dockerfiles.
-  Triggers: docker, container, dockerfile, image, kubernetes, k8s, pod security.
+description: Docker and container security best practices. Image hardening, runtime security.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

@@ -1,9 +1,6 @@
 ---
 name: incident-response
-description: |
-  Incident response playbooks and runbooks. On-call, escalation, post-mortems.
-  Activate when handling incidents, creating runbooks, or establishing on-call processes.
-  Triggers: incident, outage, on-call, runbook, playbook, escalation, post-mortem.
+description: Incident response playbooks and runbooks. On-call, escalation, post-mortems.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

@@ -1,9 +1,6 @@
 ---
 name: design-patterns
-description: |
-  Gang of Four design patterns for object-oriented software. Creational, structural, behavioral.
-  Activate when designing architecture, refactoring, or choosing patterns.
-  Triggers: pattern, factory, singleton, strategy, observer, repository, decorator.
+description: Gang of Four design patterns for object-oriented software. Creational, structural, behavioral.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

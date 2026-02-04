@@ -1,9 +1,6 @@
 ---
 name: authentication
-description: |
-  Secure user identity verification patterns. JWT, OAuth, MFA, session-based auth.
-  Activate when implementing login, registration, password reset, social auth, or MFA.
-  Triggers: login, auth, jwt, oauth, mfa, session, password, token.
+description: Secure user identity verification patterns. JWT, OAuth, MFA, session-based auth.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

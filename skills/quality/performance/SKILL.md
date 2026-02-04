@@ -1,9 +1,6 @@
 ---
 name: performance
-description: |
-  Performance optimization patterns. Profiling, caching, database optimization.
-  Activate when addressing slow operations, optimizing queries, or improving response times.
-  Triggers: performance, slow, optimize, cache, latency, throughput, profiling.
+description: Performance optimization patterns. Profiling, caching, database optimization.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

@@ -1,9 +1,6 @@
 ---
 name: message-queues
-description: |
-  Message queue and event-driven architecture patterns.
-  Activate when designing async communication, choosing message brokers, or implementing event-driven systems.
-  Triggers: kafka, rabbitmq, sqs, sns, message queue, event-driven, pub/sub, dlq, dead letter.
+description: Message queue and event-driven architecture patterns.
 license: Apache-2.0
 compatibility: claude-code
 allowed-tools: [Read, Grep, Glob]

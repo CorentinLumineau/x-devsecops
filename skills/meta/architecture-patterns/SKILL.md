@@ -1,9 +1,6 @@
 ---
 name: architecture-patterns
-description: |
-  Software architecture patterns including microservices, event-driven, CQRS, hexagonal, and clean architecture.
-  Activate when designing system architecture, choosing patterns, or evaluating trade-offs.
-  Triggers: architecture, microservices, monolith, event-driven, CQRS, hexagonal, clean architecture, DDD, bounded context.
+description: Software architecture patterns including microservices, event-driven, CQRS, hexagonal, and clean architecture.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

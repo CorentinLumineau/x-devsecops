@@ -1,9 +1,6 @@
 ---
 name: authorization
-description: |
-  Access control strategies for determining user permissions. RBAC, ABAC, ownership.
-  Activate when implementing roles, permissions, access control, or resource protection.
-  Triggers: authorization, rbac, abac, permission, role, access control, ownership.
+description: Access control strategies for determining user permissions. RBAC, ABAC, ownership.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

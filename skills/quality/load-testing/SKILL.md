@@ -1,9 +1,6 @@
 ---
 name: load-testing
-description: |
-  Load, stress, and soak testing patterns with k6, JMeter, and Artillery.
-  Activate when setting up performance tests, defining baselines, or integrating load tests in CI.
-  Triggers: load test, stress test, soak test, performance test, k6, jmeter, artillery, benchmark.
+description: Load, stress, and soak testing patterns with k6, JMeter, and Artillery.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

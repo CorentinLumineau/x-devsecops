@@ -1,9 +1,6 @@
 ---
 name: testing
-description: |
-  Testing pyramid and TDD patterns. 70% unit, 20% integration, 10% E2E distribution.
-  Activate when writing tests, fixing test failures, verifying code changes, or reviewing coverage.
-  Triggers: test, tdd, unit test, integration test, e2e, coverage, jest, vitest.
+description: Testing pyramid and TDD patterns. 70% unit, 20% integration, 10% E2E distribution.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash

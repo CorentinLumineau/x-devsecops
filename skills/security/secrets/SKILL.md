@@ -1,9 +1,6 @@
 ---
 name: secrets
-description: |
-  Secrets management best practices. Environment variables, vaults, rotation.
-  Activate when handling API keys, credentials, tokens, or sensitive configuration.
-  Triggers: secrets, credentials, api key, password, token, env, vault.
+description: Secrets management best practices. Environment variables, vaults, rotation.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

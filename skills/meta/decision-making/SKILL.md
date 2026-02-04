@@ -1,9 +1,6 @@
 ---
 name: decision-making
-description: |
-  Technical decision frameworks. ADRs, RFC patterns, evaluating alternatives.
-  Activate when making architectural decisions, choosing technologies, or documenting choices.
-  Triggers: decision, adr, rfc, architecture, evaluate, choose, compare, recommend.
+description: Technical decision frameworks. ADRs, RFC patterns, evaluating alternatives.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

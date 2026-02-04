@@ -1,9 +1,6 @@
 ---
 name: compliance
-description: |
-  Regulatory compliance frameworks. SOC 2, GDPR, HIPAA requirements and controls.
-  Activate when implementing data protection, privacy features, or audit requirements.
-  Triggers: compliance, soc2, gdpr, hipaa, pci, audit, privacy, data protection.
+description: Regulatory compliance frameworks. SOC 2, GDPR, HIPAA requirements and controls.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
