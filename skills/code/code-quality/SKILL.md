@@ -6,13 +6,60 @@ compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "1.1.0"
   category: code
 ---
 
 # Code Quality
 
 Autonomous enforcement of development best practices for maintainable, scalable software.
+
+## Enforcement Definitions
+
+Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit) to enforce code quality.
+
+**Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
+
+### SOLID Violations
+
+| ID | Principle | Violation | Severity | Detection |
+|----|-----------|-----------|----------|-----------|
+| V-SOLID-01 | SRP | Class/module has >1 reason to change (mixed concerns) | CRITICAL | >300 lines with multiple domains, mixed I/O and logic |
+| V-SOLID-02 | OCP | Modifying existing code to add new behavior | HIGH | Switch/if-else chains for type dispatch, instanceof checks |
+| V-SOLID-03 | LSP | Subtype breaks base type contract | CRITICAL | Overridden methods with different semantics, thrown unexpected errors |
+| V-SOLID-04 | ISP | Interface forces unused method implementations | HIGH | Empty/stub method implementations, "god interfaces" |
+| V-SOLID-05 | DIP | High-level module depends on concrete implementation | HIGH | `new` in constructors, direct imports of concrete classes |
+
+### DRY Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-DRY-01 | Significant code duplication (>10 lines) | HIGH | Near-identical blocks across files or within same file |
+| V-DRY-02 | Minor code duplication (3-10 lines) | MEDIUM | Repeated patterns that should be extracted |
+| V-DRY-03 | Magic values repeated in multiple places | MEDIUM | Same literal values (strings, numbers) without named constants |
+
+### KISS Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-KISS-01 | Over-engineered abstraction | MEDIUM | Factory-builder-provider chains, unnecessary indirection layers |
+| V-KISS-02 | Unnecessary complexity (>3 nested levels) | HIGH | Deep nesting, convoluted control flow, overly generic solutions |
+
+### YAGNI Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-YAGNI-01 | Speculative feature (not requested) | HIGH | "Just in case" code, unused parameters "for future use" |
+| V-YAGNI-02 | Premature optimization | MEDIUM | Performance optimization without measured bottleneck |
+
+### Documentation Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-DOC-01 | Stale API documentation | HIGH | API signatures changed but docs not updated |
+| V-DOC-02 | Missing public API documentation | CRITICAL | Public function/class/module with no docs |
+| V-DOC-03 | Broken documentation references | MEDIUM | Dead links, references to renamed/removed entities |
+| V-DOC-04 | Missing change documentation | HIGH | Behavioral changes not reflected in relevant docs |
 
 ## SOLID Principles
 

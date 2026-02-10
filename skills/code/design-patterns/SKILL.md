@@ -6,13 +6,28 @@ compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "1.1.0"
   category: code
 ---
 
 # Design Patterns
 
 Reusable solutions to common software design problems.
+
+## Enforcement Definitions
+
+Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit) to enforce design pattern standards.
+
+**Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
+
+### Pattern Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-PAT-01 | God Object (>7 public methods AND >3 concerns) | CRITICAL | Class with excessive public surface area spanning multiple domains |
+| V-PAT-02 | Spaghetti / circular dependencies | HIGH | Module A → B → C → A, tangled import graphs |
+| V-PAT-03 | Missing obvious pattern (complex conditionals without Strategy/State) | MEDIUM | Long if-else/switch chains that should use polymorphism |
+| V-PAT-04 | Pattern misuse (pattern where simpler solution works) | HIGH | Over-applied patterns adding complexity without benefit |
 
 ## Pattern Categories
 

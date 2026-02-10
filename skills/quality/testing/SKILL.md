@@ -6,13 +6,41 @@ compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob Bash
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "1.1.0"
   category: quality
 ---
 
 # Testing
 
 Comprehensive test strategy following the testing pyramid.
+
+## Enforcement Definitions
+
+Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit) to enforce testing standards.
+
+**Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
+
+### Testing Violations
+
+| ID | Violation | Severity | Detection |
+|----|-----------|----------|-----------|
+| V-TEST-01 | No tests for new production code | CRITICAL | New functions/classes/modules without corresponding test files |
+| V-TEST-02 | Tests written after production code (TDD violation) | HIGH | Production code committed before test code in same changeset |
+| V-TEST-03 | Coverage below 80% on changed files | HIGH | Line coverage on modified/new files under threshold |
+| V-TEST-04 | Pyramid imbalance (unit tests <60% of new tests) | MEDIUM | Disproportionate integration/E2E tests vs unit tests |
+| V-TEST-05 | Test without assertions | CRITICAL | Test functions with no assert/expect/verify calls |
+| V-TEST-06 | Flaky test introduced | CRITICAL | Non-deterministic test (passes/fails inconsistently) |
+| V-TEST-07 | Mocking internal implementation details | MEDIUM | Mocking private methods, testing implementation not behavior |
+
+### TDD Mandate
+
+**TDD is MANDATORY.** The Red-Green-Refactor cycle is non-negotiable for all new code.
+
+```
+RED → GREEN → REFACTOR
+```
+
+Skipping TDD = V-TEST-02 (HIGH → BLOCK). Write the failing test FIRST, then make it pass.
 
 ## Testing Pyramid (70/20/10)
 
