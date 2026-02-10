@@ -2,7 +2,7 @@
 name: message-queues
 description: Message queue and event-driven architecture patterns.
 license: Apache-2.0
-compatibility: claude-code
+compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: [Read, Grep, Glob]
 metadata:
   author: ccsetup contributors
