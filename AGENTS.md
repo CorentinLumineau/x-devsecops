@@ -99,5 +99,5 @@ When modifying knowledge skills:
 
 ---
 
-**Version**: 0.2.1
+**Version**: 0.2.3
 **Compatibility**: skills.sh, Claude Code, Cursor, Copilot, Cline, Devin
