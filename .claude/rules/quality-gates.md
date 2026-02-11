@@ -34,3 +34,23 @@ This repository is a source repo for ccsetup. When releasing:
 1. Tag release in x-devsecops
 2. Run `make sync-skills` in ccsetup to pull latest skills
 3. Coordinate breaking changes with ccsetup maintainers
+
+---
+
+## Skill Creation
+
+For detailed skill creation rules, see [skill-creation.md](skill-creation.md).
+
+### Pre-Merge Validation
+
+Always run before merging:
+
+```bash
+make validate
+```
+
+### Recommended Creation Method
+
+```bash
+make new-skill CATEGORY=security NAME=rbac
+```

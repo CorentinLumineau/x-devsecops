@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+set -e
+echo "Pre-commit: Validating skill structure..."
+make validate || exit 1
