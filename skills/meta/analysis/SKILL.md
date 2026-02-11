@@ -6,7 +6,7 @@ compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "1.1.0"
   category: meta
 ---
 
