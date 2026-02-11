@@ -25,6 +25,29 @@ Prioritization and decision-making frameworks.
 | Tests | Critical paths |
 | Performance | Biggest bottlenecks |
 
+## Enforcement Criteria
+
+Pareto violations that workflow agents must detect and flag:
+
+| ID | Violation | Severity | Example |
+|----|-----------|----------|---------|
+| V-PARETO-01 | Over-engineered solution | HIGH | >3x complexity for marginal improvement |
+| V-PARETO-02 | Missing prioritization in output | MEDIUM | Analysis without impact ranking |
+| V-PARETO-03 | Scope creep beyond 80/20 focus | MEDIUM | Implementing low-value items before high-value |
+
+### Anti-Patterns
+- Exhaustive analysis when focused analysis suffices
+- Equal treatment of all items without impact ranking
+- Building comprehensive solutions when targeted ones would deliver 80% of value
+- Comprehensive documentation of rarely-used features over core flows
+
+### Pareto-Compliant Output
+Analysis and planning outputs SHOULD include:
+- Impact ranking (Critical > High > Medium > Low)
+- Effort-to-value ratio for each item
+- Clear "Quick Wins" identification (high impact, low effort)
+- Explicit deprioritization of low-value items
+
 ## Priority Matrix
 
 | Priority | Impact | Effort | Action |
