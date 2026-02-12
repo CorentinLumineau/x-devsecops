@@ -4,6 +4,7 @@ description: Gang of Four design patterns for object-oriented software. Creation
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
+user-invocable: false
 metadata:
   author: ccsetup contributors
   version: "1.1.0"
