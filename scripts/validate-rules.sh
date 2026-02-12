@@ -159,6 +159,17 @@ for category_dir in "$REPO_ROOT/skills"/*/; do
                     else
                         log_success "skills/$category_name/$skill_name has single-line description"
                     fi
+
+                    # Check: Description length (budget optimization)
+                    desc_len=${#fm_desc_value}
+                    if [[ $desc_len -gt 120 ]]; then
+                        log_warning "skills/$category_name/$skill_name description is $desc_len chars (recommended: ≤120)"
+                    fi
+
+                    # Check: Description is YAML-safe (no unquoted colon-space that breaks parsing)
+                    if echo "$fm_desc_value" | grep -qE ': [a-z]' && ! echo "$fm_desc_line" | grep -qE '^description: ["\x27]'; then
+                        log_warning "skills/$category_name/$skill_name description contains ': ' — should be quoted to avoid YAML parse errors"
+                    fi
                 else
                     log_error "skills/$category_name/$skill_name is missing description field"
                 fi
