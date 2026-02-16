@@ -17,7 +17,7 @@ Autonomous enforcement of development best practices for maintainable, scalable 
 
 ## Enforcement Definitions
 
-Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit) to enforce code quality.
+Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-create-commit) to enforce code quality.
 
 **Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
 

@@ -11,6 +11,20 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v1.0.0
 
 ---
 
+## [1.2.0] - 2026-02-16
+
+### Added
+- **4 new knowledge skills** for git-forge-layer initiative:
+  - `security/git` - Git security patterns (GPG signing, hook security, secret scanning)
+  - `vcs/forge-operations` - Cross-forge CLI equivalences for GitHub and Gitea
+  - `vcs/conventional-commits` - Conventional commit message standards
+  - `vcs/git-workflows` - Git branching strategies and collaboration patterns
+
+### Changed
+- Update cross-references: `x-commit` → `git-create-commit` in code-quality, design-patterns, testing skills
+
+---
+
 ## [0.2.1] - 2026-01-29
 
 ### Changed
@@ -48,5 +62,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v1.0.0
 
 ---
 
-[Unreleased]: https://github.com/CorentinLumineau/x-devsecops/compare/v0.1.0...HEAD
+[Unreleased]: https://github.com/CorentinLumineau/x-devsecops/compare/v1.2.0...HEAD
+[1.2.0]: https://github.com/CorentinLumineau/x-devsecops/compare/v1.1.0...v1.2.0
+[0.2.1]: https://github.com/CorentinLumineau/x-devsecops/compare/v0.2.0...v0.2.1
+[0.2.0]: https://github.com/CorentinLumineau/x-devsecops/compare/v0.1.0...v0.2.0
 [0.1.0]: https://github.com/CorentinLumineau/x-devsecops/releases/tag/v0.1.0
