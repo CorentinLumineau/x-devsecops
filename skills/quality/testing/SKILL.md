@@ -1,19 +1,19 @@
 ---
 name: testing
-description: Testing pyramid and TDD patterns. 70% unit, 20% integration, 10% E2E distribution.
+description: Testing pyramid, TDD patterns, and quality gate checks for comprehensive code validation.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
-allowed-tools: Read Grep Glob Bash
+allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.1.0"
+  version: "2.0.0"
   category: quality
 ---
 
 # Testing
 
-Comprehensive test strategy following the testing pyramid.
+Comprehensive test strategy following the testing pyramid, with integrated quality gate validation.
 
 ## Enforcement Definitions
 
@@ -38,10 +38,10 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit
 **TDD is MANDATORY.** The Red-Green-Refactor cycle is non-negotiable for all new code.
 
 ```
-RED → GREEN → REFACTOR
+RED -> GREEN -> REFACTOR
 ```
 
-Skipping TDD = V-TEST-02 (HIGH → BLOCK). Write the failing test FIRST, then make it pass.
+Skipping TDD = V-TEST-02 (HIGH -> BLOCK). Write the failing test FIRST, then make it pass.
 
 ## Testing Pyramid (70/20/10)
 
@@ -109,6 +109,69 @@ When tests fail:
 4. Re-run tests
 5. Repeat until 100% passing
 
+## Quality Gates
+
+Automated validation checks ensuring code quality standards before merging.
+
+### Gate Categories
+
+| Category | Checks | Blocking |
+|----------|--------|----------|
+| Standard | Types, lint, build | Yes |
+| Extended | Tests, coverage, SOLID | Yes |
+| Documentation | Doc sync, changelog | Warning |
+
+### Standard Gates (Always Run)
+
+| Gate | Command Example | Fail Condition |
+|------|-----------------|----------------|
+| Type check | `tsc --noEmit` | Type errors |
+| Lint | `eslint .` | Lint violations |
+| Build | `npm run build` | Build failure |
+
+### Extended Gates (Implementation)
+
+| Gate | Command Example | Fail Condition |
+|------|-----------------|----------------|
+| Unit tests | `npm test` | Test failures |
+| Coverage | `npm run coverage` | Below threshold (80%) |
+| SOLID audit | Manual review | Violations detected |
+
+### Gate Execution Order
+
+```
+1. Type check (fast fail)
+2. Lint (fast fail)
+3. Build (validates compilation)
+4. Tests (validates functionality)
+5. Coverage (validates completeness)
+```
+
+### Coverage Thresholds
+
+| Level | Lines | Branches | Functions |
+|-------|-------|----------|-----------|
+| Minimum | 70% | 60% | 70% |
+| Target | 80% | 70% | 80% |
+| Strict | 90% | 85% | 90% |
+
+### Pre-Commit Gates
+
+Run before every commit:
+- [ ] Format check (prettier)
+- [ ] Lint check
+- [ ] Type check
+- [ ] Affected tests
+
+### CI/CD Gates
+
+Run on every PR:
+- [ ] All standard gates
+- [ ] Full test suite
+- [ ] Coverage threshold
+- [ ] Security scan
+- [ ] Build artifact creation
+
 ## Test Quality Checklist
 
 - [ ] Tests follow 70/20/10 distribution
@@ -118,6 +181,9 @@ When tests fail:
 - [ ] No test.skip() in codebase
 - [ ] Regression tests for fixed bugs
 - [ ] Coverage targets met (80%+)
+- [ ] Type check passes
+- [ ] No lint errors
+- [ ] Build succeeds
 
 ## Anti-Patterns
 
@@ -134,3 +200,11 @@ When tests fail:
 - **For TDD patterns**: See `references/tdd-patterns.md`
 - **For coverage strategies**: See `references/coverage.md`
 - **For mocking patterns**: See `references/mocking.md`
+- **For testing pyramid details**: See `references/pyramid.md`
+- **For quality gate protocol**: See `references/quality-gate-protocol.md`
+
+## Related Skills
+
+- **Code quality**: See `code/code-quality` for SOLID principles validated by gates
+- **Debugging**: See `quality/debugging-performance` for fixing test failures
+- **CI/CD**: See `delivery/ci-cd` for pipeline gate integration
