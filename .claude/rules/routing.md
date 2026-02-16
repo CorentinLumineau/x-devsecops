@@ -17,26 +17,56 @@
 ```
 New knowledge component needed?
 │
-├─ Topic about authentication, authorization, vulnerabilities, secrets?
-│  └─ → security/
+├─ Topic about vulnerabilities, input validation, CORS, security headers?
+│  └─ → security/secure-coding
 │
-├─ Topic about testing, debugging, performance, quality checks?
-│  └─ → quality/
+├─ Topic about authentication, authorization, compliance, access control?
+│  └─ → security/identity-access
 │
-├─ Topic about SOLID, design patterns, APIs, error handling, code style?
-│  └─ → code/
+├─ Topic about secrets, supply chain, containers, SBOM?
+│  └─ → security/secrets-supply-chain
 │
-├─ Topic about CI/CD, releases, infrastructure, feature flags?
-│  └─ → delivery/
+├─ Topic about testing, TDD, quality gates, coverage?
+│  └─ → quality/testing
 │
-├─ Topic about incidents, monitoring, runbooks, alerting?
-│  └─ → operations/
+├─ Topic about debugging, profiling, performance optimization?
+│  └─ → quality/debugging-performance
 │
-├─ Topic about decisions, analysis, prioritization, ADRs?
-│  └─ → meta/
+├─ Topic about logging, tracing, metrics, load testing?
+│  └─ → quality/observability
 │
-└─ Topic about databases, SQL, migrations, data modeling?
-   └─ → data/
+├─ Topic about SOLID, DRY, refactoring, code review?
+│  └─ → code/code-quality
+│
+├─ Topic about design patterns (Factory, Strategy, Observer)?
+│  └─ → code/design-patterns
+│
+├─ Topic about REST, GraphQL, SDK design, OpenAPI?
+│  └─ → code/api-design
+│
+├─ Topic about error handling, exceptions, recovery?
+│  └─ → code/error-handling
+│
+├─ Topic about CI/CD pipelines, deployment strategies?
+│  └─ → delivery/ci-cd-delivery
+│
+├─ Topic about git workflows, releases, versioning, commits?
+│  └─ → delivery/release-git
+│
+├─ Topic about infrastructure, IaC, feature flags?
+│  └─ → delivery/infrastructure
+│
+├─ Topic about SRE, incidents, monitoring, disaster recovery?
+│  └─ → operations/sre-operations
+│
+├─ Topic about decisions, analysis, architecture patterns?
+│  └─ → meta/analysis-architecture
+│
+├─ Topic about databases, SQL, NoSQL, caching?
+│  └─ → data/data-persistence
+│
+└─ Topic about message queues, event-driven, Kafka, RabbitMQ?
+   └─ → data/messaging
 ```
 
 ---

@@ -13,15 +13,15 @@ x-devsecops is a skills.sh-compatible plugin providing DevSecOps knowledge skill
 
 | Category | Skills | Key Topics |
 |----------|--------|------------|
-| **Security** (9) | authentication, authorization, owasp, input-validation, secrets, container-security, compliance, supply-chain, api-security | JWT, RBAC, OWASP Top 10, XSS/SQLi, Vault, K8s security, SOC2/GDPR, SLSA, CORS |
-| **Quality** (7) | testing, debugging, quality-gates, performance, load-testing, accessibility-wcag, observability | TDD, debugging strategies, CI gates, DB optimization, k6, WCAG, OpenTelemetry |
-| **Code** (7) | code-quality, design-patterns, api-design, error-handling, llm-optimization, refactoring-patterns, sdk-design | SOLID, Factory/Strategy/Observer, OpenAPI, async errors, prompt engineering, Fowler's catalog |
-| **Delivery** (5) | ci-cd, release-management, infrastructure, feature-flags, deployment-strategies | GitHub Actions, branching, Terraform/K8s, A/B testing, blue-green/canary |
-| **Operations** (4) | incident-response, monitoring, sre-practices, disaster-recovery | Runbooks, post-mortems, Prometheus, SLOs, error budgets, failover |
-| **Meta** (3) | analysis, decision-making, architecture-patterns | ADRs, RFC process, prioritization, microservices, event-driven |
-| **Data** (4) | database, caching, nosql, message-queues | PostgreSQL, Redis, MongoDB, Kafka/RabbitMQ |
+| **Security** (3) | secure-coding, identity-access, secrets-supply-chain | OWASP Top 10, input validation, CORS, JWT/OAuth/MFA, RBAC/ABAC, SOC2/GDPR, Vault, SLSA/SBOM, container hardening |
+| **Code** (4) | code-quality, design-patterns, api-design, error-handling | SOLID/DRY/KISS, refactoring catalog, code review, Factory/Strategy/Observer, REST/GraphQL, SDK design, async errors |
+| **Quality** (3) | testing, debugging-performance, observability | TDD, testing pyramid, quality gates, systematic debugging, profiling, optimization, OpenTelemetry, k6 |
+| **Delivery** (3) | ci-cd-delivery, release-git, infrastructure | GitHub Actions, blue-green/canary, SemVer, git workflows, commit conventions, Terraform/K8s, feature flags |
+| **Operations** (1) | sre-operations | SRE principles, SLOs, error budgets, incident response, monitoring, golden signals, disaster recovery |
+| **Meta** (1) | analysis-architecture | Pareto 80/20, ADRs/RFCs, trade-off analysis, microservices, event-driven, clean architecture |
+| **Data** (2) | data-persistence, messaging | PostgreSQL, MongoDB, Redis, SQL/NoSQL decision tree, Kafka, RabbitMQ, event-driven patterns |
 
-**Total**: 39 knowledge skills across 7 categories
+**Total**: 17 knowledge skills across 7 categories
 
 ## Usage Patterns
 
@@ -30,12 +30,12 @@ Skills activate automatically based on context:
 | Context | Skills to Reference |
 |---------|---------------------|
 | Writing code | code-quality, design-patterns, error-handling |
-| Security review | owasp, input-validation, authentication, authorization |
-| Testing | testing, debugging, quality-gates |
-| Deployment | ci-cd, release-management, infrastructure |
-| Production issues | incident-response, monitoring, sre-practices |
-| Technical decisions | analysis, decision-making, architecture-patterns |
-| Data layer | database, caching, nosql, message-queues |
+| Security review | secure-coding, identity-access, secrets-supply-chain |
+| Testing | testing, debugging-performance |
+| Deployment | ci-cd-delivery, release-git, infrastructure |
+| Production issues | sre-operations, observability |
+| Technical decisions | analysis-architecture |
+| Data layer | data-persistence, messaging |
 
 ## Build & Test
 
@@ -48,7 +48,7 @@ for cat in code data delivery meta operations quality security; do
 done
 
 # Check reference files
-find skills -path "*/references/*.md" | wc -l  # Should be 95+
+find skills -path "*/references/*.md" | wc -l  # Should be 101
 
 # Validate no empty files
 find skills -name "*.md" -empty
@@ -86,7 +86,7 @@ Types: feat, fix, docs, refactor
 Scopes: category/skill-name or category
 ```
 
-Example: `feat(security/owasp): add injection prevention reference`
+Example: `feat(security/secure-coding): add injection prevention reference`
 
 ## Testing Instructions
 
@@ -99,5 +99,5 @@ When modifying knowledge skills:
 
 ---
 
-**Version**: 0.2.3
+**Version**: 2.0.0
 **Compatibility**: skills.sh, Claude Code, Cursor, Copilot, Cline, Devin

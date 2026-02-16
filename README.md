@@ -12,7 +12,7 @@ x-devsecops is part of the **ccsetup 3-repository architecture** ("Swiss Watch" 
 
 | Repository | Role | Description |
 |------------|------|-------------|
-| **x-devsecops** | WHAT to know | 39 knowledge skills (domain expertise) ← *You are here* |
+| **x-devsecops** | WHAT to know | 17 knowledge skills (domain expertise) ← *You are here* |
 | **x-workflows** | HOW to work | 25 workflow skills (development processes) |
 | **ccsetup** | Orchestration | Commands, agents, hooks |
 
@@ -20,79 +20,57 @@ For complete architectural documentation, see [ccsetup/ARCHITECTURE.md](https://
 
 ## Skills Catalog
 
-### Code (7 skills)
+### Security (3 skills)
 
 | Skill | Description |
 |-------|-------------|
-| `code-quality` | SOLID, DRY, KISS, YAGNI principles |
-| `design-patterns` | Factory, Repository, Strategy, Observer |
-| `api-design` | REST and GraphQL design principles |
-| `error-handling` | Error handling and recovery patterns |
-| `llm-optimization` | LLM-assisted development patterns |
-| `refactoring-patterns` | Fowler's refactoring catalog and safe techniques |
-| `sdk-design` | SDK and API client design, OpenAPI codegen |
+| `secure-coding` | OWASP Top 10, input validation, API security, CORS, security headers |
+| `identity-access` | JWT/OAuth/MFA authentication, RBAC/ABAC authorization, SOC2/GDPR compliance |
+| `secrets-supply-chain` | Secrets management, vault/rotation, SLSA/SBOM, container security |
 
-### Security (9 skills)
+### Code (4 skills)
 
 | Skill | Description |
 |-------|-------------|
-| `authentication` | JWT, OAuth, MFA, session management |
-| `authorization` | RBAC, ABAC, ownership patterns |
-| `owasp` | OWASP Top 10 vulnerability prevention |
-| `input-validation` | Validation and sanitization patterns |
-| `secrets` | Secrets management best practices |
-| `container-security` | Docker and container security |
-| `compliance` | SOC2, GDPR, HIPAA frameworks |
-| `supply-chain` | Dependency security, SBOM, SCA |
-| `api-security` | API auth patterns, CORS, rate limiting |
+| `code-quality` | SOLID, DRY, KISS, YAGNI principles, refactoring catalog, code review |
+| `design-patterns` | Factory, Repository, Strategy, Observer (GoF patterns) |
+| `api-design` | REST and GraphQL design, SDK patterns, OpenAPI codegen |
+| `error-handling` | Error handling, exception management, recovery patterns |
 
-### Quality (7 skills)
+### Quality (3 skills)
 
 | Skill | Description |
 |-------|-------------|
-| `testing` | Testing pyramid (70/20/10), TDD patterns |
-| `debugging` | Hypothesis-driven debugging methodology |
-| `quality-gates` | CI quality checks and validation |
-| `performance` | Performance optimization patterns |
-| `load-testing` | Load, stress, and soak testing with k6 |
-| `accessibility-wcag` | WCAG 2.1/2.2 compliance and ARIA patterns |
-| `observability` | Distributed tracing, structured logging, OpenTelemetry |
+| `testing` | Testing pyramid (70/20/10), TDD patterns, quality gates |
+| `debugging-performance` | Systematic debugging, profiling, optimization patterns |
+| `observability` | Distributed tracing, structured logging, OpenTelemetry, load testing |
 
-### Delivery (5 skills)
+### Delivery (3 skills)
 
 | Skill | Description |
 |-------|-------------|
-| `ci-cd` | Pipeline patterns and best practices |
-| `release-management` | SemVer, changelog, safe git operations |
-| `infrastructure` | Terraform, Docker Compose, IaC patterns |
-| `feature-flags` | Progressive rollouts, A/B testing |
-| `deployment-strategies` | Blue-green, canary, rolling deployments |
+| `ci-cd-delivery` | Pipeline patterns, GitHub Actions, blue-green/canary deployments |
+| `release-git` | SemVer, changelog, git workflows, commit conventions, PR practices |
+| `infrastructure` | Terraform, Docker, Kubernetes, feature flags, A/B testing |
 
-### Operations (4 skills)
+### Operations (1 skill)
 
 | Skill | Description |
 |-------|-------------|
-| `incident-response` | Runbooks, post-mortems, escalation |
-| `monitoring` | Golden signals, SLOs, observability |
-| `sre-practices` | SLO framework, error budgets, toil reduction |
-| `disaster-recovery` | RTO/RPO planning, backup strategies, failover |
+| `sre-operations` | SRE principles, SLOs, error budgets, incident response, monitoring, DR |
 
-### Meta (3 skills)
+### Meta (1 skill)
 
 | Skill | Description |
 |-------|-------------|
-| `analysis` | Pareto 80/20, prioritization frameworks |
-| `decision-making` | ADRs, RFC patterns, evaluation matrices |
-| `architecture-patterns` | Microservices, event-driven, clean architecture |
+| `analysis-architecture` | Pareto 80/20, ADRs/RFCs, microservices, event-driven, clean architecture |
 
-### Data (4 skills)
+### Data (2 skills)
 
 | Skill | Description |
 |-------|-------------|
-| `database` | Schema design, migrations, query optimization |
-| `caching` | Redis patterns, cache invalidation strategies |
-| `nosql` | MongoDB, DynamoDB, document modeling |
-| `message-queues` | Kafka, RabbitMQ, event-driven architecture |
+| `data-persistence` | PostgreSQL, MongoDB, Redis, SQL/NoSQL decision tree, caching patterns |
+| `messaging` | Kafka, RabbitMQ, event-driven architecture patterns |
 
 ## Installation
 
@@ -127,7 +105,7 @@ Use the testing skill to review my test coverage.
 
 ### With Workflow Skills
 
-x-devsecops skills provide domain knowledge that workflow skills (from x-workflows) reference during execution. For example, x-verify references the `testing` and `quality-gates` skills.
+x-devsecops skills provide domain knowledge that workflow skills (from x-workflows) reference during execution. For example, x-verify references the `testing` skill for quality gates.
 
 ## Structure
 
@@ -136,52 +114,30 @@ x-devsecops/
 ├── .claude-plugin/
 │   └── plugin.json
 ├── skills/
+│   ├── security/
+│   │   ├── secure-coding/
+│   │   ├── identity-access/
+│   │   └── secrets-supply-chain/
 │   ├── code/
 │   │   ├── code-quality/
 │   │   ├── design-patterns/
 │   │   ├── api-design/
-│   │   ├── error-handling/
-│   │   ├── llm-optimization/
-│   │   ├── refactoring-patterns/
-│   │   └── sdk-design/
-│   ├── security/
-│   │   ├── authentication/
-│   │   ├── authorization/
-│   │   ├── owasp/
-│   │   ├── input-validation/
-│   │   ├── secrets/
-│   │   ├── container-security/
-│   │   ├── compliance/
-│   │   ├── supply-chain/
-│   │   └── api-security/
+│   │   └── error-handling/
 │   ├── quality/
 │   │   ├── testing/
-│   │   ├── debugging/
-│   │   ├── quality-gates/
-│   │   ├── performance/
-│   │   ├── load-testing/
-│   │   ├── accessibility-wcag/
+│   │   ├── debugging-performance/
 │   │   └── observability/
 │   ├── delivery/
-│   │   ├── ci-cd/
-│   │   ├── release-management/
-│   │   ├── infrastructure/
-│   │   ├── feature-flags/
-│   │   └── deployment-strategies/
+│   │   ├── ci-cd-delivery/
+│   │   ├── release-git/
+│   │   └── infrastructure/
 │   ├── operations/
-│   │   ├── incident-response/
-│   │   ├── monitoring/
-│   │   ├── sre-practices/
-│   │   └── disaster-recovery/
+│   │   └── sre-operations/
 │   ├── meta/
-│   │   ├── analysis/
-│   │   ├── decision-making/
-│   │   └── architecture-patterns/
+│   │   └── analysis-architecture/
 │   └── data/
-│       ├── database/
-│       ├── caching/
-│       ├── nosql/
-│       └── message-queues/
+│       ├── data-persistence/
+│       └── messaging/
 ├── LICENSE
 └── README.md
 ```
@@ -192,10 +148,10 @@ Knowledge skills are referenced by workflow skills:
 
 | Workflow Skill | Knowledge Skills Used |
 |----------------|----------------------|
-| x-verify | testing, quality-gates |
+| x-verify | testing |
 | x-implement | code-quality, design-patterns |
-| x-review | owasp, code-quality |
-| x-troubleshoot | debugging, incident-response |
+| x-review | secure-coding, code-quality |
+| x-troubleshoot | debugging-performance, sre-operations |
 | x-docs | api-design |
 
 See [AGENT-USAGE.md](AGENT-USAGE.md) for detailed workflow integration patterns.
@@ -211,7 +167,7 @@ for cat in code data delivery meta operations quality security; do
 done
 
 # Check reference files
-find skills -path "*/references/*.md" | wc -l  # Should be 95+
+find skills -path "*/references/*.md" | wc -l  # Should be 101
 
 # Validate no empty files
 find skills -name "*.md" -empty
@@ -249,7 +205,7 @@ Types: feat, fix, docs, refactor
 Scopes: category/skill-name or category
 ```
 
-Example: `feat(security/owasp): add injection prevention reference`
+Example: `feat(security/secure-coding): add injection prevention reference`
 
 ## Testing Instructions
 
@@ -270,5 +226,5 @@ Contributions welcome! Please follow the skill template format in each SKILL.md 
 
 ---
 
-**Version**: 0.2.1
+**Version**: 2.0.0
 **Compatibility**: skills.sh, Claude Code, Cursor, Copilot, Cline, Devin

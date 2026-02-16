@@ -14,13 +14,13 @@
 
 | Category | Skills | Example Topics |
 |----------|--------|----------------|
-| `security/` | authentication, owasp, secrets, authorization, etc. | JWT, RBAC, OWASP Top 10, vault |
-| `quality/` | testing, debugging, performance, quality-gates | TDD, coverage, profiling, validation |
-| `code/` | code-quality, design-patterns, api-design, error-handling | SOLID, Factory, OpenAPI, exceptions |
-| `delivery/` | ci-cd, release-management, infrastructure, feature-flags | GitHub Actions, SemVer, Terraform |
-| `operations/` | incident-response, monitoring | Runbooks, Prometheus, alerting |
-| `meta/` | analysis, decision-making | ADRs, Pareto, prioritization |
-| `data/` | database | PostgreSQL, migrations, indexing |
+| `security/` | secure-coding, identity-access, secrets-supply-chain | OWASP Top 10, input validation, JWT, RBAC, vault, SLSA |
+| `quality/` | testing, debugging-performance, observability | TDD, quality gates, profiling, OpenTelemetry, k6 |
+| `code/` | code-quality, design-patterns, api-design, error-handling | SOLID, refactoring, Factory, OpenAPI, SDK design, exceptions |
+| `delivery/` | ci-cd-delivery, release-git, infrastructure | GitHub Actions, blue-green/canary, SemVer, git workflows, Terraform |
+| `operations/` | sre-operations | SRE, SLOs, incident response, monitoring, DR |
+| `meta/` | analysis-architecture | ADRs, Pareto, microservices, event-driven, clean architecture |
+| `data/` | data-persistence, messaging | PostgreSQL, MongoDB, Redis, Kafka, RabbitMQ |
 
 ---
 
