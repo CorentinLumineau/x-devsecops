@@ -7,7 +7,7 @@ version: "1.0.0"
 
 # Large-Scale Refactoring
 
-> Part of the code/refactoring-patterns knowledge skill
+> Part of the code/code-quality knowledge skill
 
 ## Overview
 

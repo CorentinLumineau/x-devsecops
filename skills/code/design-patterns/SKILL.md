@@ -7,7 +7,7 @@ allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.1.0"
+  version: "2.0.0"
   category: code
 ---
 
@@ -124,3 +124,9 @@ Before applying a pattern:
 - **For creational patterns**: See `references/creational.md`
 - **For structural patterns**: See `references/structural.md`
 - **For behavioral patterns**: See `references/behavioral.md`
+
+## Related Skills
+
+- **@skills/code-code-quality/** - SOLID principles, refactoring, and code review
+- **@skills/code-error-handling/** - Error handling patterns and exception management
+- **@skills/code-api-design/** - REST API and SDK design best practices

@@ -7,7 +7,7 @@ allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "2.0.0"
   category: code
 ---
 
@@ -112,3 +112,9 @@ Wrap components/operations:
 - **For async error handling**: See `references/async-errors.md`
 - **For API error responses**: See `references/api-errors.md`
 - **For error monitoring**: See `references/monitoring.md`
+
+## Related Skills
+
+- **@skills/code-code-quality/** - SOLID principles, refactoring, and code review
+- **@skills/code-design-patterns/** - GoF design patterns
+- **@skills/code-api-design/** - REST API and SDK design best practices

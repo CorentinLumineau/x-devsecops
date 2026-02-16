@@ -1,19 +1,19 @@
 ---
 name: code-quality
-description: Enforces SOLID, DRY, KISS, YAGNI principles when writing or reviewing code.
+description: Enforces SOLID, DRY, KISS, YAGNI principles, refactoring patterns, and code review practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.1.0"
+  version: "2.0.0"
   category: code
 ---
 
 # Code Quality
 
-Autonomous enforcement of development best practices for maintainable, scalable software.
+Autonomous enforcement of development best practices for maintainable, scalable software. Includes SOLID principles, refactoring catalog, and code review practices.
 
 ## Enforcement Definitions
 
@@ -108,6 +108,97 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit
 
 **Fix**: Build only what's required now. Document ideas separately.
 
+## Refactoring Catalog (Fowler's Patterns)
+
+### Quick Reference (80/20)
+
+| Refactoring | When to Use | Risk |
+|------------|-------------|------|
+| Extract Method | Long method, duplicated logic | Low |
+| Extract Class | Class with multiple responsibilities | Medium |
+| Move Method | Method uses another class more | Low |
+| Rename | Name does not reveal intent | Low |
+| Replace Conditional with Polymorphism | Complex switch/if chains | Medium |
+| Introduce Parameter Object | Long parameter lists | Low |
+
+### Code Smells to Refactoring Map
+
+| Smell | Primary Refactoring |
+|-------|-------------------|
+| Long Method | Extract Method |
+| Large Class | Extract Class |
+| Feature Envy | Move Method |
+| Data Clumps | Introduce Parameter Object |
+| Primitive Obsession | Replace Primitive with Object |
+| Switch Statements | Replace with Polymorphism |
+| Parallel Inheritance | Move Method, Collapse Hierarchy |
+| Divergent Change | Extract Class |
+| Shotgun Surgery | Move Method, Inline Class |
+
+### Safe Refactoring Workflow
+
+```
+1. Ensure tests pass (green)
+2. Make one refactoring move
+3. Run tests (must stay green)
+4. Commit
+5. Repeat
+```
+
+### Large-Scale Refactoring Strategies
+
+| Strategy | Duration | Risk | Best For |
+|----------|----------|------|----------|
+| Strangler Fig | Months | Low | Monolith decomposition |
+| Branch by Abstraction | Weeks | Low-medium | Swapping implementations |
+| Parallel Run | Weeks | Low | Verifying replacement correctness |
+| Feature Toggle Migration | Days-weeks | Low | Gradual rollout |
+
+### When NOT to Refactor
+
+| Situation | Instead |
+|-----------|---------|
+| No tests exist | Write characterization tests first |
+| Deadline pressure | Document debt, refactor later |
+| Complete rewrite needed | Plan migration, not refactoring |
+| Code rarely changes | Leave it alone (Pareto) |
+
+## Code Review Practices
+
+### PR Review Checklist
+
+| Category | Check |
+|----------|-------|
+| Correctness | Does the code do what it claims? |
+| Design | Is the approach appropriate for the problem? |
+| Naming | Are variables, functions, classes well-named? |
+| Complexity | Is the code as simple as possible? |
+| Tests | Are there adequate tests for the changes? |
+| Consistency | Does it follow existing codebase patterns? |
+| Security | Are there any security implications? |
+| Performance | Are there obvious performance concerns? |
+
+### Review Anti-Patterns
+
+| Anti-Pattern | Better Approach |
+|--------------|----------------|
+| Rubber-stamping (approval without reading) | Allocate dedicated review time |
+| Nitpicking style only | Focus on logic, design, correctness first |
+| Blocking on preferences | Distinguish preferences from requirements |
+| Reviewing too late | Review early, review often (draft PRs) |
+| Huge PRs (>500 lines) | Break into focused, reviewable chunks |
+| No context in PR description | Require clear description of what and why |
+
+### Effective Feedback Guidelines
+
+| Do | Avoid |
+|----|-------|
+| Ask questions to understand intent | Assume bad intent |
+| Suggest alternatives with reasoning | Dictate without explanation |
+| Distinguish "must fix" from "nit" | Treat all feedback as blocking |
+| Praise good patterns | Only point out problems |
+| Link to relevant standards/docs | Make unsubstantiated claims |
+
 ## Quality Checklist
 
 ### Before Coding
@@ -127,6 +218,7 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit
 - [ ] No unused interface methods implemented (ISP)
 - [ ] No speculative features (YAGNI)
 - [ ] No code duplication (DRY)
+- [ ] Tests pass before and after refactoring
 
 ## Quick Reference
 
@@ -139,8 +231,21 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, x-commit
 | Copy-pasted code | DRY | Extract function |
 | Complex solution | KISS | Simplify |
 | "Maybe needed" code | YAGNI | Remove |
+| Long method | Refactoring | Extract Method |
+| Data clumps | Refactoring | Introduce Parameter Object |
+| Feature envy | Refactoring | Move Method |
 
 ## When to Load References
 
 - **For detailed SOLID examples**: See `references/solid-examples.md`
 - **For anti-patterns catalog**: See `references/anti-patterns.md`
+- **For code quality checklist**: See `references/checklist.md`
+- **For common refactorings (Fowler's catalog)**: See `references/common-refactorings.md`
+- **For large-scale refactoring strategies**: See `references/large-scale-refactoring.md`
+
+## Related Skills
+
+- **@skills/code-design-patterns/** - GoF design patterns for object-oriented design
+- **@skills/code-error-handling/** - Error handling patterns and exception management
+- **@skills/code-api-design/** - REST API and SDK design best practices
+- **@skills/quality-testing/** - Testing strategies and TDD
