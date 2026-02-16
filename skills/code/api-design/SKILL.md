@@ -7,7 +7,7 @@ allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "2.0.0"
+  version: "1.0.0"
   category: code
 ---
 
@@ -157,7 +157,7 @@ const user = await client.request(
 
 | Change | Version Bump | Example |
 |--------|--------------|---------|
-| Breaking API change | Major | 1.0.0 -> 2.0.0 |
+| Breaking API change | Major | 1.0.0 -> 1.0.0 |
 | New feature, backward compatible | Minor | 1.0.0 -> 1.1.0 |
 | Bug fix | Patch | 1.0.0 -> 1.0.1 |
 

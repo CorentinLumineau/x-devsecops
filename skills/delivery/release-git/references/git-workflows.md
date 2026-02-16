@@ -2,7 +2,7 @@
 title: Git Workflows Reference
 category: delivery
 type: reference
-version: "2.0.0"
+version: "1.0.0"
 ---
 
 # Git Workflows
@@ -100,7 +100,7 @@ A structured branching model with `main`, `develop`, `feature/*`, `release/*`, a
 ```
 main -------------------------------------------------->
   |                    |                    |
-  |                    +-- v2.0.0           +-- v2.1.0
+  |                    +-- v1.0.0           +-- v2.1.0
   |                          |
 develop --------------------------------------------------->
   |      |       |                 |        |

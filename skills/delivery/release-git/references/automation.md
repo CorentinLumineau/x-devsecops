@@ -41,7 +41,7 @@ Release automation reduces manual errors and accelerates delivery. This referenc
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.0",
     "@semantic-release/git": "^10.0.0",
-    "semantic-release": "^22.0.0"
+    "semantic-release": "^21.0.0"
   }
 }
 ```

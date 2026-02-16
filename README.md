@@ -226,5 +226,5 @@ Contributions welcome! Please follow the skill template format in each SKILL.md 
 
 ---
 
-**Version**: 2.0.0
+**Version**: 1.0.0
 **Compatibility**: skills.sh, Claude Code, Cursor, Copilot, Cline, Devin

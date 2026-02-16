@@ -7,7 +7,7 @@ allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "2.0.0"
+  version: "1.0.0"
   category: delivery
 ---
 
@@ -103,7 +103,7 @@ main --------------------------------------------->
 ```
 main ------------------------------------------------>
   |                    |                    |
-  |                    +-- v2.0.0           +-- v2.1.0
+  |                    +-- v1.0.0           +-- v2.1.0
 develop --------------------------------------------->
   |      |       |                 |
   |      |       +-- release/2.0 --+

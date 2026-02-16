@@ -139,7 +139,7 @@ gh pr merge --squash
 ```
 main ─────────────────────────────────────────────►
   │                    │                    │
-  │                    └── v2.0.0           └── v2.1.0
+  │                    └── v1.0.0           └── v2.1.0
   │                          │
 develop ──────────────────────────────────────────►
   │      │       │                 │        │
@@ -162,9 +162,9 @@ git flow feature start user-profiles
 git flow feature finish user-profiles
 
 # Start release
-git flow release start 2.0.0
+git flow release start 1.0.0
 # Bugfixes only in release branch...
-git flow release finish 2.0.0
+git flow release finish 1.0.0
 
 # Hotfix for production
 git flow hotfix start critical-fix

@@ -37,7 +37,7 @@ Changelogs communicate changes to users and developers. This reference covers ch
 All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
-and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v1.0.0.html).
 
 ## [Unreleased]
 
@@ -72,7 +72,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Updated dependencies to patch CVE-2024-1234
 - Added CSRF protection to all forms
 
-## [2.0.0] - 2024-01-01
+## [1.0.0] - 2024-01-01
 
 ### Added
 - Complete API redesign with v2 endpoints
@@ -90,8 +90,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ...
 
 [Unreleased]: https://github.com/user/repo/compare/v2.1.0...HEAD
-[2.1.0]: https://github.com/user/repo/compare/v2.0.0...v2.1.0
-[2.0.0]: https://github.com/user/repo/compare/v1.5.0...v2.0.0
+[2.1.0]: https://github.com/user/repo/compare/v1.0.0...v2.1.0
+[1.0.0]: https://github.com/user/repo/compare/v1.5.0...v1.0.0
 [1.5.0]: https://github.com/user/repo/releases/tag/v1.5.0
 ```
 
