@@ -364,5 +364,5 @@ FOLLOW-UP: Post-mortem scheduled [date]
 
 - See `@skills/quality-observability` for OpenTelemetry and distributed tracing
 - See `@skills/quality-testing` for testing practices
-- See `@skills/delivery-cicd` for CI/CD and deployment strategies
+- See `@skills/delivery-ci-cd` for CI/CD and deployment strategies
 - See `@skills/security-owasp` for security incident context
