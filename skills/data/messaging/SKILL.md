@@ -1,17 +1,17 @@
 ---
-name: message-queues
-description: Message queue and event-driven architecture patterns.
+name: messaging
+description: Message queue and event-driven architecture patterns for decoupled, scalable systems.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
-allowed-tools: [Read, Grep, Glob]
+allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
+  version: "2.0.0"
   category: data
 ---
 
-# Message Queues & Event-Driven Patterns
+# Messaging & Event-Driven Patterns
 
 Asynchronous messaging patterns for decoupled, scalable systems.
 
@@ -44,8 +44,8 @@ Focus on these three decisions (80% of messaging success):
 One producer, one consumer per message. Use for task distribution.
 
 ```
-Producer → [Queue] → Consumer
-                   → Consumer  (competing consumers)
+Producer --> [Queue] --> Consumer
+                     --> Consumer  (competing consumers)
 ```
 
 ### Publish-Subscribe (Topic)
@@ -53,9 +53,9 @@ Producer → [Queue] → Consumer
 One producer, many consumers. Use for event broadcasting.
 
 ```
-Producer → [Topic] → Consumer A (notifications)
-                   → Consumer B (analytics)
-                   → Consumer C (audit)
+Producer --> [Topic] --> Consumer A (notifications)
+                     --> Consumer B (analytics)
+                     --> Consumer C (audit)
 ```
 
 ### Request-Reply
@@ -63,8 +63,8 @@ Producer → [Topic] → Consumer A (notifications)
 Synchronous-style communication over async transport.
 
 ```
-Client → [Request Queue] → Server
-Client ← [Reply Queue]   ← Server
+Client --> [Request Queue] --> Server
+Client <-- [Reply Queue]   <-- Server
 ```
 
 ## Delivery Guarantees
@@ -133,14 +133,48 @@ retry_policy:
 - Keep messages small (< 1MB); use claim-check for large payloads
 - Version your schemas (Avro, Protobuf, JSON Schema)
 
+## Quick Reference
+
+| Task | Approach |
+|------|----------|
+| Task distribution | Point-to-point queue with competing consumers |
+| Event broadcasting | Publish-subscribe with topic/fanout |
+| Reliable delivery | At-least-once + idempotent consumers |
+| Failed message handling | Dead letter queues with alerting |
+| High throughput streaming | Kafka with partitioning |
+| Simple task routing | RabbitMQ with exchanges |
+| Cloud-native async | SQS/SNS managed queues |
+| Schema evolution | Schema registry (Avro/Protobuf) |
+
+## Checklist
+
+### Design Phase
+- [ ] Broker selected based on requirements (Kafka vs RabbitMQ vs managed)
+- [ ] Delivery guarantee chosen (default: at-least-once)
+- [ ] Message schema defined with versioning
+- [ ] Dead letter queue strategy planned
+
+### Implementation
+- [ ] Idempotent consumers implemented
+- [ ] Retry policy with exponential backoff configured
+- [ ] DLQ monitoring and alerting in place
+- [ ] Correlation IDs included for tracing
+
+### Operations
+- [ ] Consumer lag monitored
+- [ ] DLQ depth alerting configured
+- [ ] Schema compatibility enforced
+- [ ] Capacity planning documented
+
 ## When to Load References
 
 - **For Kafka patterns**: See `references/kafka-patterns.md`
 - **For RabbitMQ patterns**: See `references/rabbitmq-patterns.md`
 - **For event-driven architecture**: See `references/event-driven.md`
 
-## Cross-References
+## Related Skills
 
-- **API design**: See `code/api-design` skill
-- **Error handling**: See `code/error-handling` skill
-- **Observability**: See `quality/observability` skill
+- `data/data-persistence` - Database and caching patterns
+- `code/api-design` - API design for service communication
+- `code/error-handling` - Error handling patterns
+- `operations/observability` - Monitoring and tracing
