@@ -339,3 +339,4 @@ async function getWithLock(key: string) {
 - `code/api-design` - API design patterns for data access
 - `quality/performance` - Performance testing and optimization
 - `operations/observability` - Database monitoring and alerting
+- `quality/debugging-performance` - Caching patterns and database optimization from a debugging/performance perspective

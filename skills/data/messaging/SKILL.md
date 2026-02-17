@@ -178,3 +178,4 @@ retry_policy:
 - `code/api-design` - API design for service communication
 - `code/error-handling` - Error handling patterns
 - `operations/observability` - Monitoring and tracing
+- `meta/analysis-architecture` - Event-driven architecture patterns from an architectural perspective

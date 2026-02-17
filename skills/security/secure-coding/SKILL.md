@@ -170,3 +170,4 @@ Validate all input at the API boundary:
 
 - **[identity-access](../identity-access/SKILL.md)** - Authentication, authorization, and compliance
 - **[secrets-supply-chain](../secrets-supply-chain/SKILL.md)** - Secrets management and supply chain security
+- **code/api-design** - API design patterns including rate limiting and SDK error handling from an implementation perspective

@@ -187,8 +187,8 @@ develop --------------------------------------------->
 ## When to Load References
 
 - **For branching strategy details**: See `references/branching.md`
-- **For Git workflow patterns**: See `references/git-workflows.md`
-- **For commit convention details**: See `references/commit-conventions.md`
+- **For Git workflow patterns**: See `vcs/git-workflows` skill
+- **For commit convention details**: See `vcs/conventional-commits` skill
 - **For changelog automation**: See `references/changelog.md`
 - **For release automation tools**: See `references/automation.md`
 
@@ -196,3 +196,5 @@ develop --------------------------------------------->
 
 - **CI/CD & Delivery**: See `delivery/ci-cd-delivery` for pipelines and deployment strategies
 - **Infrastructure**: See `delivery/infrastructure` for IaC and container patterns
+- **Conventional Commits**: See `vcs/conventional-commits` for commit message format and tooling
+- **Git Workflows**: See `vcs/git-workflows` for branching strategies and merge patterns

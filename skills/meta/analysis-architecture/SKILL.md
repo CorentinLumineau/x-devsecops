@@ -295,6 +295,7 @@ Criteria for quick wins:
 - `@skills/data-database` - Database selection and optimization
 - `@skills/delivery-ci-cd` - CI/CD for architecture deployment
 - `@skills/operations-incident-response` - Incident handling for distributed systems
+- `data/messaging` - Event-driven implementation patterns (Kafka, RabbitMQ, message design)
 
 ## When to Load References
 

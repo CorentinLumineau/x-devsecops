@@ -187,3 +187,4 @@ Expose thinking process during debugging:
 - **Testing**: See `quality/testing` for test-driven bug prevention
 - **Observability**: See `quality/observability` for production debugging with logs/traces
 - **Database**: See `data/database` for advanced query optimization
+- **Data Persistence**: See `data/data-persistence` for caching strategies and database design patterns
