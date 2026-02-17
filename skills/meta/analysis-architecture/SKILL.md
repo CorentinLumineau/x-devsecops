@@ -292,9 +292,9 @@ Criteria for quick wins:
 - `@skills/code-code-quality` - SOLID principles for code-level design
 - `@skills/code-design-patterns` - Implementation-level patterns (Factory, Strategy, Observer)
 - `@skills/code-api-design` - API design and versioning
-- `@skills/data-database` - Database selection and optimization
-- `@skills/delivery-ci-cd` - CI/CD for architecture deployment
-- `@skills/operations-incident-response` - Incident handling for distributed systems
+- `@skills/data-data-persistence` - Database selection and optimization
+- `@skills/delivery-ci-cd-delivery` - CI/CD for architecture deployment
+- `@skills/operations-sre-operations` - Incident handling for distributed systems
 - `data/messaging` - Event-driven implementation patterns (Kafka, RabbitMQ, message design)
 
 ## When to Load References

@@ -52,7 +52,7 @@ async def get_data():
 
 ## JWT Authentication
 
-**Comprehensive patterns**: See @skills/security-authentication/references/jwt-patterns.md for token generation, storage strategies, refresh rotation, and verification middleware.
+**Comprehensive patterns**: See @skills/security-identity-access/references/jwt-patterns.md for token generation, storage strategies, refresh rotation, and verification middleware.
 
 **Quick validation example**:
 ```python

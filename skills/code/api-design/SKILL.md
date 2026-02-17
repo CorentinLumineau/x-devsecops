@@ -219,5 +219,5 @@ const client = new APIClient.Builder()
 - **@skills/code-error-handling/** - Error handling patterns and exception management
 - **@skills/code-code-quality/** - SOLID principles, refactoring, and code review
 - **@skills/code-design-patterns/** - GoF design patterns
-- **@skills/security-api-security/** - API security (CORS, authentication, rate limiting)
+- **@skills/security-secure-coding/** - API security (CORS, authentication, rate limiting)
 - **security/secure-coding** - Rate limiting and API security from a security perspective (OWASP Top 10)

@@ -41,7 +41,7 @@ const [rows] = await db.execute('SELECT * FROM users WHERE id = ?', [userId]);
 return prisma.user.findUnique({ where: { id: userId } });
 ```
 
-**Comprehensive patterns**: See @skills/security-input-validation/references/sql-injection.md for:
+**Comprehensive patterns**: See @skills/security-secure-coding/references/sql-injection.md for:
 - ORM query builders (Prisma, TypeORM, Sequelize, Knex)
 - Dynamic table/column whitelisting
 - IN clause and LIKE clause handling
