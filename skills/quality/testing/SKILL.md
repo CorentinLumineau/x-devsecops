@@ -17,7 +17,7 @@ Comprehensive test strategy following the testing pyramid, with integrated quali
 
 ## Enforcement Definitions
 
-Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-create-commit) to enforce testing standards.
+Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-commit) to enforce testing standards.
 
 **Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
 

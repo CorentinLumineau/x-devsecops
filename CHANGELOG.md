@@ -21,7 +21,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v1.0.0
   - `vcs/git-workflows` - Git branching strategies and collaboration patterns
 
 ### Changed
-- Update cross-references: `x-commit` → `git-create-commit` in code-quality, design-patterns, testing skills
+- Update cross-references: `x-commit` → `git-commit` in code-quality, design-patterns, testing skills
 
 ---
 
