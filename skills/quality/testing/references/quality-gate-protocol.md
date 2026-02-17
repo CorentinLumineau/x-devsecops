@@ -154,7 +154,7 @@ Commands should NOT implement quality gates inline. Instead, invoke code-quality
 ```markdown
 3. **Quality Validation** (via code-quality skill)
    - Run standard + extended gates
-   - See @skills/code-quality/references/QUALITY-GATES.md
+   - See @skills/code-code-quality/references/QUALITY-GATES.md
 ```
 
 ## SOLID Validation Details

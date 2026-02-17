@@ -24,11 +24,8 @@ Prioritization frameworks, decision-making processes, and software architecture 
 | ADRs | Status, context, decision, consequences | Architecture changes, technology choices |
 | RFCs | Problem, proposal, alternatives, risks | Large changes needing broad input (>2 weeks or cross-team) |
 | Trade-off Analysis | Dimensions, options scoring, weighted criteria | Technology evaluation, build vs buy |
-| Microservices | Service decomposition, sagas, contracts | Large teams, independent deployment needs |
-| Event-Driven | Events, producers, consumers, event sourcing | Async workflows, decoupling, audit trails |
-| Clean Architecture | Entities, use cases, adapters, frameworks | Long-lived apps needing testability and adaptability |
-| CQRS | Separate read/write models | Read/write asymmetry (>10:1 ratio) |
-| Hexagonal | Ports and adapters, driving/driven sides | Infrastructure swappability, testability |
+
+For architecture pattern matrices, DDD patterns, and detailed comparisons, see `references/decision-matrices.md`.
 
 ## Enforcement Criteria
 
@@ -44,7 +41,6 @@ Pareto violations that workflow agents must detect and flag:
 - Exhaustive analysis when focused analysis suffices
 - Equal treatment of all items without impact ranking
 - Building comprehensive solutions when targeted ones would deliver 80% of value
-- Comprehensive documentation of rarely-used features over core flows
 
 ### Pareto-Compliant Output
 Analysis and planning outputs SHOULD include:
@@ -93,61 +89,13 @@ What is the change being proposed?
 What becomes easier or harder?
 ```
 
-**Best Practices**: One decision per ADR, number sequentially, keep in version control, link related ADRs, update status when superseded.
+**Best Practices**: One decision per ADR, number sequentially, keep in version control, link related ADRs.
 
 ### RFC (Request for Comments)
 
 Use for larger changes needing broad input (>2 weeks work or cross-team impact).
 
-```markdown
-# RFC: [Title]
-
-## Summary
-One paragraph overview.
-
-## Motivation
-Why should we do this?
-
-## Detailed Design
-How will this work?
-
-## Drawbacks
-Why might we not do this?
-
-## Alternatives
-What other approaches were considered?
-
-## Unresolved Questions
-What needs more discussion?
-```
-
 **Timeline**: 1 week draft, 2 weeks review, 1 week final comment. Approval requires 2+ reviewers with no blocking concerns.
-
-### Decision Criteria Matrix
-
-| Criterion | Weight | Option A | Option B |
-|-----------|--------|----------|----------|
-| Performance | 3 | 4/5 | 3/5 |
-| Maintainability | 2 | 3/5 | 4/5 |
-| Learning curve | 1 | 2/5 | 5/5 |
-| **Total** | | **26** | **27** |
-
-### Decision Anti-Patterns
-
-| Anti-pattern | Better Approach |
-|--------------|-----------------|
-| Analysis paralysis | Time-box decisions |
-| HIPPO (highest paid opinion) | Data-driven criteria |
-| Resume-driven | Business needs first |
-| Golden hammer | Right tool for job |
-
-### Reversibility
-
-| Reversibility | Approach |
-|---------------|----------|
-| Easy to reverse | Decide quickly, iterate |
-| Hard to reverse | Take time, gather input |
-| One-way door | Extensive analysis, approval |
 
 ## Trade-off Analysis
 
@@ -158,112 +106,28 @@ What needs more discussion?
 | Flexibility vs Simplicity | Generic vs specific |
 | Consistency vs Innovation | Standard vs new approach |
 
-## Architecture Patterns
+## Architecture Patterns (Summary)
 
-### Pattern Selection Decision Tree
+| Pattern | Best For | Team Size |
+|---------|----------|-----------|
+| Modular Monolith | Most startups, small teams | 1-10 |
+| Microservices | Large orgs, independent deployment | 10+ per service |
+| Event-Driven | Async workflows, decoupling | 5+ |
+| CQRS | Read/write asymmetry (>10:1 ratio) | 5+ |
+| Hexagonal | Testability, port swapping | 3+ |
+| Clean Architecture | Long-lived enterprise apps | 5+ |
 
-```
-Team < 5 engineers?
-  -> Modular Monolith
+**Default**: Start with Modular Monolith, extract later.
 
-Need independent deployment per team?
-  -> Microservices
-
-Heavy async processing?
-  -> Event-Driven
-
-Read/write ratio > 10:1?
-  -> Consider CQRS
-
-Need to swap infrastructure easily?
-  -> Hexagonal Architecture
-
-Long-lived enterprise system?
-  -> Clean Architecture
-
-Uncertain? -> Start with Modular Monolith, extract later
-```
-
-### Architecture Decision Matrix
-
-| Factor | Monolith | Microservices | Event-Driven |
-|--------|----------|---------------|-------------|
-| Deployment | Simple | Complex | Medium |
-| Data consistency | Strong (ACID) | Eventual | Eventual |
-| Latency | Low (in-process) | Higher (network) | Variable |
-| Scaling | Vertical | Horizontal per service | Horizontal |
-| Debugging | Easy | Hard (distributed) | Hard (async) |
-| Team autonomy | Low | High | Medium |
-
-### Pattern Quick Reference
-
-| Pattern | Best For | Complexity | Team Size |
-|---------|----------|-----------|-----------|
-| Modular Monolith | Most startups, small teams | Low | 1-10 |
-| Microservices | Large orgs, independent deployment | High | 10+ per service |
-| Event-Driven | Async workflows, decoupling | Medium-high | 5+ |
-| CQRS | Read/write asymmetry | Medium | 5+ |
-| Hexagonal | Testability, port swapping | Medium | 3+ |
-| Clean Architecture | Long-lived enterprise apps | Medium | 5+ |
-
-### DDD Strategic Patterns
-
-| Pattern | Purpose |
-|---------|---------|
-| Bounded Context | Define model boundaries |
-| Context Map | Show relationships between contexts |
-| Ubiquitous Language | Shared vocabulary per context |
-| Anti-Corruption Layer | Protect from external model changes |
-| Shared Kernel | Small shared model between contexts |
+For full decision trees, comparison matrices, and DDD patterns, see `references/decision-matrices.md`.
 
 ## Analysis Framework
 
-### 1. Define the Problem
-- What exactly needs to be solved?
-- Who is affected?
-- What is the impact of not solving it?
-
-### 2. Gather Data
-- Current metrics
-- User feedback
-- Technical constraints
-
-### 3. Identify Options
-- List all approaches
-- Include "do nothing"
-
-### 4. Evaluate Trade-offs
-
-| Option | Pros | Cons | Risk |
-|--------|------|------|------|
-| A | ... | ... | ... |
-| B | ... | ... | ... |
-
-### 5. Decide and Document
-- Clear recommendation
-- Reasoning documented
-- Rollback plan
-
-## Prioritization Frameworks
-
-| Framework | Best For |
-|-----------|----------|
-| RICE | Product features |
-| MoSCoW | Requirements |
-| Eisenhower | Time management |
-| WSJF | Agile planning |
-| Value vs Effort | Quick decisions |
-
-## Technology Evaluation
-
-| Factor | Questions |
-|--------|-----------|
-| Maturity | How long in production use? |
-| Community | Size, activity, responsiveness? |
-| Documentation | Quality, completeness? |
-| Ecosystem | Plugins, integrations? |
-| Team expertise | Learning curve? |
-| Maintenance | Long-term commitment? |
+1. **Define the Problem** - What exactly needs to be solved? Who is affected?
+2. **Gather Data** - Current metrics, user feedback, technical constraints
+3. **Identify Options** - List all approaches, include "do nothing"
+4. **Evaluate Trade-offs** - Pros, cons, risk for each option
+5. **Decide and Document** - Clear recommendation, reasoning, rollback plan
 
 ## Quick Wins Identification
 
@@ -281,11 +145,18 @@ Criteria for quick wins:
 - [ ] Options listed (including "do nothing")
 - [ ] Trade-offs evaluated with weighted criteria
 - [ ] Decision documented (ADR/RFC as appropriate)
-- [ ] Success criteria defined
 - [ ] Architecture matches team size and skills
-- [ ] Boundaries align with business domains
-- [ ] Communication patterns defined
-- [ ] Failure modes analyzed
+
+## When to Load References
+
+- **For ADR templates and formats**: See `references/adr-template.md`
+- **For real-world ADR examples**: See `references/adr-examples.md`
+- **For prioritization frameworks** (RICE, MoSCoW, WSJF): See `references/prioritization.md`
+- **For RFC process and lifecycle**: See `references/rfc-process.md`
+- **For clean architecture layers**: See `references/clean-architecture.md`
+- **For event-driven patterns**: See `references/event-driven.md`
+- **For microservices patterns**: See `references/microservices.md`
+- **For decision matrices and pattern comparisons**: See `references/decision-matrices.md`
 
 ## Related Skills
 
@@ -296,13 +167,3 @@ Criteria for quick wins:
 - `@skills/delivery-ci-cd-delivery` - CI/CD for architecture deployment
 - `@skills/operations-sre-operations` - Incident handling for distributed systems
 - `data/messaging` - Event-driven implementation patterns (Kafka, RabbitMQ, message design)
-
-## When to Load References
-
-- **For ADR templates and formats**: See `references/adr-template.md`
-- **For real-world ADR examples** (database, API, auth, infrastructure): See `references/adr-examples.md`
-- **For prioritization frameworks** (RICE, MoSCoW, WSJF, Eisenhower): See `references/prioritization.md`
-- **For RFC process and lifecycle**: See `references/rfc-process.md`
-- **For clean architecture layers and dependency rules**: See `references/clean-architecture.md`
-- **For event-driven patterns** (event sourcing, CQRS, pub/sub, DLQ): See `references/event-driven.md`
-- **For microservices patterns** (decomposition, sagas, service mesh, contract testing): See `references/microservices.md`
