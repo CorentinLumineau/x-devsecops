@@ -97,88 +97,9 @@ which tea || echo "Install: https://gitea.com/gitea/tea"
 
 ---
 
-## PR Workflow Pattern
+## Workflow Patterns
 
-Cross-forge PR creation follows this pattern:
-
-```bash
-# 1. Detect forge
-FORGE=$(detect_forge)
-
-# 2. Create PR with equivalent command
-if [ "$FORGE" = "github" ]; then
-  gh pr create --title "..." --body "..."
-elif [ "$FORGE" = "gitea" ]; then
-  tea pr create --title "..." --body "..."
-fi
-
-# 3. Check CI status
-if [ "$FORGE" = "github" ]; then
-  gh pr checks
-elif [ "$FORGE" = "gitea" ]; then
-  tea pr ci
-fi
-
-# 4. Merge when ready
-if [ "$FORGE" = "github" ]; then
-  gh pr merge --squash
-elif [ "$FORGE" = "gitea" ]; then
-  tea pr merge --squash
-fi
-```
-
----
-
-## Issue Workflow Pattern
-
-Cross-forge issue management:
-
-```bash
-# Create issue
-gh issue create --title "Bug: ..." --label "bug"      # GitHub
-tea issue create --title "Bug: ..." --label "bug"    # Gitea
-
-# Add to milestone
-gh issue edit 42 --milestone "v1.0"                   # GitHub
-tea issue edit 42 --milestone "v1.0"                  # Gitea
-
-# Close with reference
-gh issue close 42 --comment "Fixed in #43"            # GitHub
-tea issue close 42 --comment "Fixed in #43"           # Gitea
-```
-
----
-
-## Release Operations
-
-Both forges support tag-based releases with similar CLI patterns:
-
-```bash
-# Create release from tag
-gh release create v1.0.0 --title "Release 1.0" --notes "..."    # GitHub
-tea release create --tag v1.0.0 --title "Release 1.0" --note "..."  # Gitea
-
-# Attach artifacts
-gh release upload v1.0.0 dist/*.tar.gz                # GitHub
-tea release create --tag v1.0.0 --asset dist/*.tar.gz # Gitea
-```
-
-**Key difference**: Gitea's `tea` combines asset upload with creation.
-
----
-
-## CLI Capability Matrix
-
-| Capability | gh (GitHub) | tea (Gitea) | Notes |
-|------------|-------------|-------------|-------|
-| PR templates | ✓ | ✓ | Both support .github/pull_request_template.md |
-| Draft PRs | ✓ | ✓ | `--draft` flag |
-| PR reviews | ✓ | ✓ | `gh pr review`, `tea pr review` |
-| Auto-merge | ✓ | ✓ | `--auto` flag |
-| Issue templates | ✓ | ✓ | .github/ISSUE_TEMPLATE/ |
-| Project boards | ✓ | ✗ | GitHub-only feature |
-| CI integration | ✓ | ✓ | Different status check APIs |
-| GPG verification | ✓ | ✓ | Both display signature status |
+> See [references/forge-scripts.md](references/forge-scripts.md) for cross-forge PR creation, issue management, release operations, and CI status check scripts.
 
 ---
 
@@ -190,6 +111,7 @@ tea release create --tag v1.0.0 --asset dist/*.tar.gz # Gitea
 | `detection-patterns.md` | Implementing forge detection logic | Building multi-forge tools |
 | `pr-operations.md` | Managing PR lifecycle | PR creation, review, merge workflows |
 | `issue-operations.md` | Issue tracking workflows | Issue triage, labeling, milestones |
+| `forge-scripts.md` | Using ready-made scripts | Cross-forge PR, issue, release, CI scripts |
 
 ---
 
@@ -209,43 +131,6 @@ tea release create --tag v1.0.0 --asset dist/*.tar.gz # Gitea
 3. **Inconsistent flags** - Some flags differ (`gh pr view` vs `tea pr show`)
 4. **API rate limits** - GitHub has stricter limits than self-hosted Gitea
 5. **Authentication** - Each CLI has separate auth (`gh auth login`, `tea login add`)
-
----
-
-## Examples
-
-### Forge-Agnostic PR Creation Script
-
-```bash
-#!/bin/bash
-# Detects forge and creates PR with appropriate CLI
-
-REMOTE_URL=$(git remote get-url origin)
-
-if echo "$REMOTE_URL" | grep -q "github.com"; then
-  gh pr create --title "$1" --body "$2" --draft
-elif command -v tea &> /dev/null; then
-  tea pr create --title "$1" --body "$2" --draft
-else
-  echo "Error: No forge CLI detected. Install gh or tea."
-  exit 1
-fi
-```
-
-### Multi-Forge CI Status Check
-
-```bash
-#!/bin/bash
-# Check CI status across forges
-
-REMOTE_URL=$(git remote get-url origin)
-
-if echo "$REMOTE_URL" | grep -q "github.com"; then
-  gh pr checks
-else
-  tea pr ci
-fi
-```
 
 ---
 

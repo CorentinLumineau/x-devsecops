@@ -124,47 +124,7 @@ if (resource.ownerId !== currentUser.id) {
 
 ## Compliance
 
-### Framework Overview
-
-| Framework | Focus | Applies To |
-|-----------|-------|------------|
-| SOC 2 | Security controls | B2B SaaS |
-| GDPR | Privacy (EU) | EU user data |
-| HIPAA | Healthcare data | US healthcare |
-| PCI DSS | Payment cards | Card processing |
-| ISO 27001 | InfoSec management | Enterprise |
-
-### SOC 2 Trust Service Criteria
-
-| Criteria | Key Controls |
-|----------|--------------|
-| Security | Access control, encryption, firewalls |
-| Availability | Uptime monitoring, redundancy, DR |
-| Processing Integrity | Data validation, error handling |
-| Confidentiality | Encryption, classification, access logs |
-| Privacy | Consent, data minimization, retention |
-
-### GDPR Data Subject Rights
-
-| Right | Implementation |
-|-------|----------------|
-| Access | Export user data endpoint |
-| Rectification | Edit profile endpoint |
-| Erasure | Delete account with cascade |
-| Portability | JSON/CSV export |
-| Restriction | Disable processing flag |
-| Object | Opt-out preferences |
-
-### Common Controls Across Frameworks
-
-| Control | SOC 2 | GDPR | HIPAA |
-|---------|-------|------|-------|
-| Encryption at rest | Yes | Yes | Yes |
-| Encryption in transit | Yes | Yes | Yes |
-| Access logging | Yes | Yes | Yes |
-| MFA | Yes | - | Yes |
-| Data classification | Yes | Yes | Yes |
-| Incident response | Yes | Yes | Yes |
+> See [references/compliance-frameworks.md](references/compliance-frameworks.md) for SOC 2, GDPR, HIPAA, PCI DSS framework details and cross-framework controls.
 
 ## Security Checklist
 
@@ -200,6 +160,7 @@ if (resource.ownerId !== currentUser.id) {
 - **For RBAC implementation**: See `references/rbac-patterns.md`
 - **For ABAC policies**: See `references/abac-policies.md`
 - **For database schema**: See `references/auth-schema.md`
+- **For compliance frameworks**: See `references/compliance-frameworks.md`
 - **For SOC 2 controls**: See `references/soc2-controls.md`
 - **For GDPR implementation**: See `references/gdpr-implementation.md`
 - **For audit preparation**: See `references/audit-checklist.md`

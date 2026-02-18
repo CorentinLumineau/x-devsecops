@@ -12,21 +12,22 @@ x-devsecops is part of the **ccsetup 3-repository architecture** ("Swiss Watch" 
 
 | Repository | Role | Description |
 |------------|------|-------------|
-| **x-devsecops** | WHAT to know | 17 knowledge skills (domain expertise) ← *You are here* |
-| **x-workflows** | HOW to work | 25 workflow skills (development processes) |
+| **x-devsecops** | WHAT to know | 21 knowledge skills (domain expertise) ← *You are here* |
+| **x-workflows** | HOW to work | 40 workflow skills (development processes) |
 | **ccsetup** | Orchestration | Commands, agents, hooks |
 
 For complete architectural documentation, see [ccsetup/ARCHITECTURE.md](https://github.com/CorentinLumineau/ccsetup/blob/main/ARCHITECTURE.md)
 
 ## Skills Catalog
 
-### Security (3 skills)
+### Security (4 skills)
 
 | Skill | Description |
 |-------|-------------|
 | `secure-coding` | OWASP Top 10, input validation, API security, CORS, security headers |
 | `identity-access` | JWT/OAuth/MFA authentication, RBAC/ABAC authorization, SOC2/GDPR compliance |
 | `secrets-supply-chain` | Secrets management, vault/rotation, SLSA/SBOM, container security |
+| `git` | GPG signing, secret scanning, hook security, git-specific security practices |
 
 ### Code (4 skills)
 
@@ -71,6 +72,14 @@ For complete architectural documentation, see [ccsetup/ARCHITECTURE.md](https://
 |-------|-------------|
 | `data-persistence` | PostgreSQL, MongoDB, Redis, SQL/NoSQL decision tree, caching patterns |
 | `messaging` | Kafka, RabbitMQ, event-driven architecture patterns |
+
+### VCS (3 skills)
+
+| Skill | Description |
+|-------|-------------|
+| `git-workflows` | Git operations patterns for conflict resolution, rebase strategies, history navigation |
+| `conventional-commits` | Conventional commits specification, types, scopes, breaking changes, co-authored-by |
+| `forge-operations` | Cross-forge CLI equivalences (GitHub/Gitea), PR/issue/release operations |
 
 ## Installation
 
@@ -117,7 +126,8 @@ x-devsecops/
 │   ├── security/
 │   │   ├── secure-coding/
 │   │   ├── identity-access/
-│   │   └── secrets-supply-chain/
+│   │   ├── secrets-supply-chain/
+│   │   └── git/
 │   ├── code/
 │   │   ├── code-quality/
 │   │   ├── design-patterns/
@@ -135,9 +145,13 @@ x-devsecops/
 │   │   └── sre-operations/
 │   ├── meta/
 │   │   └── analysis-architecture/
-│   └── data/
-│       ├── data-persistence/
-│       └── messaging/
+│   ├── data/
+│   │   ├── data-persistence/
+│   │   └── messaging/
+│   └── vcs/
+│       ├── git-workflows/
+│       ├── conventional-commits/
+│       └── forge-operations/
 ├── LICENSE
 └── README.md
 ```
@@ -162,7 +176,7 @@ No build required - pure markdown documentation.
 
 ```bash
 # Validate skill structure
-for cat in code data delivery meta operations quality security; do
+for cat in code data delivery meta operations quality security vcs; do
   echo "$cat: $(ls -d skills/$cat/*/ 2>/dev/null | wc -l) skills"
 done
 
@@ -184,7 +198,7 @@ skills/{category}/{skill-name}/
     └── ...
 ```
 
-**Categories**: code, data, delivery, meta, operations, quality, security
+**Categories**: code, data, delivery, meta, operations, quality, security, vcs
 
 ## Security Considerations
 

@@ -108,96 +108,13 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-comm
 
 **Fix**: Build only what's required now. Document ideas separately.
 
-## Refactoring Catalog (Fowler's Patterns)
+## Refactoring Catalog
 
-### Quick Reference (80/20)
-
-| Refactoring | When to Use | Risk |
-|------------|-------------|------|
-| Extract Method | Long method, duplicated logic | Low |
-| Extract Class | Class with multiple responsibilities | Medium |
-| Move Method | Method uses another class more | Low |
-| Rename | Name does not reveal intent | Low |
-| Replace Conditional with Polymorphism | Complex switch/if chains | Medium |
-| Introduce Parameter Object | Long parameter lists | Low |
-
-### Code Smells to Refactoring Map
-
-| Smell | Primary Refactoring |
-|-------|-------------------|
-| Long Method | Extract Method |
-| Large Class | Extract Class |
-| Feature Envy | Move Method |
-| Data Clumps | Introduce Parameter Object |
-| Primitive Obsession | Replace Primitive with Object |
-| Switch Statements | Replace with Polymorphism |
-| Parallel Inheritance | Move Method, Collapse Hierarchy |
-| Divergent Change | Extract Class |
-| Shotgun Surgery | Move Method, Inline Class |
-
-### Safe Refactoring Workflow
-
-```
-1. Ensure tests pass (green)
-2. Make one refactoring move
-3. Run tests (must stay green)
-4. Commit
-5. Repeat
-```
-
-### Large-Scale Refactoring Strategies
-
-| Strategy | Duration | Risk | Best For |
-|----------|----------|------|----------|
-| Strangler Fig | Months | Low | Monolith decomposition |
-| Branch by Abstraction | Weeks | Low-medium | Swapping implementations |
-| Parallel Run | Weeks | Low | Verifying replacement correctness |
-| Feature Toggle Migration | Days-weeks | Low | Gradual rollout |
-
-### When NOT to Refactor
-
-| Situation | Instead |
-|-----------|---------|
-| No tests exist | Write characterization tests first |
-| Deadline pressure | Document debt, refactor later |
-| Complete rewrite needed | Plan migration, not refactoring |
-| Code rarely changes | Leave it alone (Pareto) |
+> See [references/refactoring-catalog.md](references/refactoring-catalog.md) for Fowler's refactoring patterns, code smells mapping, safe workflow, and large-scale strategies.
 
 ## Code Review Practices
 
-### PR Review Checklist
-
-| Category | Check |
-|----------|-------|
-| Correctness | Does the code do what it claims? |
-| Design | Is the approach appropriate for the problem? |
-| Naming | Are variables, functions, classes well-named? |
-| Complexity | Is the code as simple as possible? |
-| Tests | Are there adequate tests for the changes? |
-| Consistency | Does it follow existing codebase patterns? |
-| Security | Are there any security implications? |
-| Performance | Are there obvious performance concerns? |
-
-### Review Anti-Patterns
-
-| Anti-Pattern | Better Approach |
-|--------------|----------------|
-| Rubber-stamping (approval without reading) | Allocate dedicated review time |
-| Nitpicking style only | Focus on logic, design, correctness first |
-| Blocking on preferences | Distinguish preferences from requirements |
-| Reviewing too late | Review early, review often (draft PRs) |
-| Huge PRs (>500 lines) | Break into focused, reviewable chunks |
-| No context in PR description | Require clear description of what and why |
-
-### Effective Feedback Guidelines
-
-| Do | Avoid |
-|----|-------|
-| Ask questions to understand intent | Assume bad intent |
-| Suggest alternatives with reasoning | Dictate without explanation |
-| Distinguish "must fix" from "nit" | Treat all feedback as blocking |
-| Praise good patterns | Only point out problems |
-| Link to relevant standards/docs | Make unsubstantiated claims |
+> See [references/code-review-practices.md](references/code-review-practices.md) for PR review checklists, anti-patterns, and effective feedback guidelines.
 
 ## Quality Checklist
 
@@ -240,6 +157,8 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-comm
 - **For detailed SOLID examples**: See `references/solid-examples.md`
 - **For anti-patterns catalog**: See `references/anti-patterns.md`
 - **For code quality checklist**: See `references/checklist.md`
+- **For refactoring catalog (Fowler's patterns)**: See `references/refactoring-catalog.md`
+- **For code review practices**: See `references/code-review-practices.md`
 - **For common refactorings (Fowler's catalog)**: See `references/common-refactorings.md`
 - **For large-scale refactoring strategies**: See `references/large-scale-refactoring.md`
 
