@@ -1,6 +1,6 @@
 ---
 name: observability
-description: Observability patterns covering logs, metrics, traces, and load testing with k6 for production insight.
+description: Use when implementing logging, metrics, tracing, or load testing for production systems. Covers observability patterns with logs, metrics, traces, and k6 load testing.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

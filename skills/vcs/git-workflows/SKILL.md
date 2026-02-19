@@ -1,6 +1,6 @@
 ---
 name: git-workflows
-description: Git operations patterns for conflict resolution, rebase strategies, and history navigation.
+description: Use when resolving Git conflicts, rebasing branches, or navigating repository history. Covers conflict resolution patterns, rebase strategies, and history navigation.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

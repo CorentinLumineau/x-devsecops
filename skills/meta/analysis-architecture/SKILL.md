@@ -1,6 +1,6 @@
 ---
 name: analysis-architecture
-description: Pareto analysis, prioritization frameworks, decision records (ADRs/RFCs), trade-off analysis, and software architecture patterns.
+description: Use when making architectural decisions, prioritizing work, or creating ADRs/RFCs. Covers Pareto analysis, trade-off frameworks, and software architecture patterns.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

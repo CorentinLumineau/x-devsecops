@@ -1,6 +1,6 @@
 ---
 name: git
-description: Git security best practices covering GPG signing, secret scanning, and hook security.
+description: Use when hardening Git repositories or configuring security controls. Covers GPG signing, secret scanning, hook security, and Git best practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

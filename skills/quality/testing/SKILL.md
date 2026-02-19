@@ -1,6 +1,6 @@
 ---
 name: testing
-description: Testing pyramid, TDD patterns, and quality gate checks for comprehensive code validation.
+description: Use when writing tests, improving coverage, or setting up quality gates. Covers testing pyramid, TDD patterns, and quality gate checks for comprehensive validation.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

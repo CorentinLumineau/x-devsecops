@@ -1,6 +1,6 @@
 ---
 name: messaging
-description: Message queue and event-driven architecture patterns for decoupled, scalable systems.
+description: Use when implementing message queues or event-driven architectures. Covers patterns for decoupled, scalable systems with async communication.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

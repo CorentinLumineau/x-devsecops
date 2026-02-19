@@ -1,6 +1,6 @@
 ---
 name: design-patterns
-description: Gang of Four design patterns for object-oriented software. Creational, structural, behavioral.
+description: Use when choosing or implementing design patterns for object-oriented software. Covers Gang of Four creational, structural, and behavioral patterns.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

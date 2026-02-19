@@ -1,6 +1,6 @@
 ---
 name: forge-operations
-description: Cross-forge CLI equivalences, detection patterns, and PR/issue/release operations for GitHub and Gitea.
+description: Use when performing forge operations (PRs, issues, releases) across GitHub and Gitea. Covers cross-forge CLI equivalences, detection patterns, and forge-agnostic operations.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

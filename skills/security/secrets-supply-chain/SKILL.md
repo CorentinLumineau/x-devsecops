@@ -1,6 +1,6 @@
 ---
 name: secrets-supply-chain
-description: Secrets management, software supply chain security, and container hardening.
+description: Use when managing secrets, securing the software supply chain, or hardening containers. Covers secrets rotation, dependency scanning, and container security.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

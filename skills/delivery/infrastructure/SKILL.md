@@ -1,6 +1,6 @@
 ---
 name: infrastructure
-description: Infrastructure as Code patterns, container orchestration, and feature flag management.
+description: Use when provisioning infrastructure, configuring containers, or managing feature flags. Covers Infrastructure as Code patterns, container orchestration, and feature flag management.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

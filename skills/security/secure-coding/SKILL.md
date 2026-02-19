@@ -1,6 +1,6 @@
 ---
 name: secure-coding
-description: Secure coding practices covering OWASP Top 10, input validation, and API security.
+description: Use when writing security-sensitive code or reviewing for vulnerabilities. Covers OWASP Top 10, input validation, and API security best practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

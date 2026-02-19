@@ -1,6 +1,6 @@
 ---
 name: conventional-commits
-description: Conventional commits specification with types, scopes, breaking changes, and co-authored-by patterns.
+description: Use when writing commit messages or configuring commit conventions. Covers conventional commits specification with types, scopes, breaking changes, and co-authored-by patterns.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

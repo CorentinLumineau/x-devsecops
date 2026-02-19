@@ -1,6 +1,6 @@
 ---
 name: code-quality
-description: Enforces SOLID, DRY, KISS, YAGNI principles, refactoring patterns, and code review practices.
+description: Use when writing, reviewing, or refactoring code to ensure quality standards. Enforces SOLID, DRY, KISS, YAGNI principles with refactoring patterns and code review practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

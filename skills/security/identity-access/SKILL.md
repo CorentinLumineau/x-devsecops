@@ -1,6 +1,6 @@
 ---
 name: identity-access
-description: Identity and access management covering authentication, authorization, and compliance.
+description: Use when implementing authentication, authorization, or access control systems. Covers identity management, IAM patterns, and compliance requirements.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

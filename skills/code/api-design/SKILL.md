@@ -1,6 +1,6 @@
 ---
 name: api-design
-description: REST API, GraphQL, and SDK design best practices. Resource naming, versioning, pagination, client libraries, code generation.
+description: Use when designing or reviewing REST APIs, GraphQL schemas, or SDK interfaces. Covers resource naming, versioning, pagination, client libraries, and code generation best practices.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob

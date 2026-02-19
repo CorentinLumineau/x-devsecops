@@ -1,6 +1,6 @@
 ---
 name: ci-cd-delivery
-description: CI/CD pipeline patterns, deployment strategies, and release automation for safe continuous delivery.
+description: Use when setting up or optimizing CI/CD pipelines and deployment automation. Covers pipeline patterns, deployment strategies, and release automation for safe continuous delivery.
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
