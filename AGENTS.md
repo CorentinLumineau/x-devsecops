@@ -13,15 +13,16 @@ x-devsecops is a skills.sh-compatible plugin providing DevSecOps knowledge skill
 
 | Category | Skills | Key Topics |
 |----------|--------|------------|
-| **Security** (3) | secure-coding, identity-access, secrets-supply-chain | OWASP Top 10, input validation, CORS, JWT/OAuth/MFA, RBAC/ABAC, SOC2/GDPR, Vault, SLSA/SBOM, container hardening |
+| **Security** (4) | secure-coding, identity-access, secrets-supply-chain, git | OWASP Top 10, input validation, CORS, JWT/OAuth/MFA, RBAC/ABAC, SOC2/GDPR, Vault, SLSA/SBOM, container hardening, GPG signing |
 | **Code** (4) | code-quality, design-patterns, api-design, error-handling | SOLID/DRY/KISS, refactoring catalog, code review, Factory/Strategy/Observer, REST/GraphQL, SDK design, async errors |
 | **Quality** (3) | testing, debugging-performance, observability | TDD, testing pyramid, quality gates, systematic debugging, profiling, optimization, OpenTelemetry, k6 |
 | **Delivery** (3) | ci-cd-delivery, release-git, infrastructure | GitHub Actions, blue-green/canary, SemVer, git workflows, commit conventions, Terraform/K8s, feature flags |
 | **Operations** (1) | sre-operations | SRE principles, SLOs, error budgets, incident response, monitoring, golden signals, disaster recovery |
 | **Meta** (1) | analysis-architecture | Pareto 80/20, ADRs/RFCs, trade-off analysis, microservices, event-driven, clean architecture |
 | **Data** (2) | data-persistence, messaging | PostgreSQL, MongoDB, Redis, SQL/NoSQL decision tree, Kafka, RabbitMQ, event-driven patterns |
+| **VCS** (3) | git-workflows, conventional-commits, forge-operations | Conflict resolution, rebase strategies, history navigation, commit conventions, forge detection |
 
-**Total**: 17 knowledge skills across 7 categories
+**Total**: 21 knowledge skills across 8 categories
 
 ## Usage Patterns
 
