@@ -161,6 +161,7 @@ Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-comm
 - **For code review practices**: See `references/code-review-practices.md`
 - **For common refactorings (Fowler's catalog)**: See `references/common-refactorings.md`
 - **For large-scale refactoring strategies**: See `references/large-scale-refactoring.md`
+- **For anti-rationalization tables (excuse vs reality patterns)**: See `references/anti-rationalization.md`
 
 ## Related Skills
 
