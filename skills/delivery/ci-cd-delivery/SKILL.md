@@ -15,6 +15,12 @@ metadata:
 
 CI/CD pipeline patterns and deployment strategies for safe, zero-downtime releases.
 
+<permission-scope mode="bypassPermissions">
+  <allowed>Read, Grep, Glob (pipeline analysis); Bash (CI/CD commands, deployment scripts)</allowed>
+  <denied>Direct production database modifications; skipping security scanning stages; manual override of deployment gates without approval</denied>
+  <scope>CI/CD pipelines operate in bypassPermissions mode for automated build, test, and deploy stages. Manual gates required for production deployment.</scope>
+</permission-scope>
+
 ## Quick Reference (80/20)
 
 | Topic | Key Concepts |

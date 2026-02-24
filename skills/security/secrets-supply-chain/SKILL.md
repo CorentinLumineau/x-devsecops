@@ -15,6 +15,10 @@ metadata:
 
 Secrets management, software supply chain security, and container hardening practices.
 
+<hook-trigger event="PreToolUse" tool="Bash" condition="Before dependency install or build commands">
+  <action>Run supply chain validation: verify lock files are committed, scan dependencies for known vulnerabilities (npm audit/snyk), and check for credential patterns in staged files</action>
+</hook-trigger>
+
 ## 80/20 Focus
 
 Master these areas for 80% of infrastructure security:

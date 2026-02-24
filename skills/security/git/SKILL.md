@@ -15,6 +15,10 @@ metadata:
 
 Git security best practices covering GPG signing, secret scanning, and hook security.
 
+<hook-trigger event="PreToolUse" tool="Bash" condition="Before git commit or git push operations">
+  <action>Trigger pre-commit secret scanning (gitleaks/git-secrets) and verify GPG signing is configured before allowing commits</action>
+</hook-trigger>
+
 ---
 
 ## 80/20 Focus

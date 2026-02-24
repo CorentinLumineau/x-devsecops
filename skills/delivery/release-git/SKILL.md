@@ -15,6 +15,10 @@ metadata:
 
 Version management, Git workflows, commit conventions, and release automation.
 
+<hook-trigger event="PreToolUse" tool="Bash" condition="Before git push or git tag operations">
+  <action>Enforce pre-push testing gates: verify all tests pass, changelog is updated, and version is bumped before allowing push to remote</action>
+</hook-trigger>
+
 ## Quick Reference (80/20)
 
 | Topic | Key Concepts |
