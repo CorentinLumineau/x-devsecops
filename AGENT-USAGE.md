@@ -23,7 +23,7 @@ For comprehensive agent patterns, see [x-workflows/agents.md](https://github.com
 | Skill Category | Agent Usage | Primary Consumer |
 |----------------|-------------|------------------|
 | Security | Rarely (knowledge provider) | x-review, x-implement |
-| Quality | Sometimes (testing triggers) | x-verify, x-troubleshoot |
+| Quality | Sometimes (testing triggers) | x-review, x-troubleshoot |
 | Code | Rarely (pattern reference) | x-implement, x-refactor |
 | Delivery | Never (process guidance) | Human/CI orchestration |
 | Operations | Never (runbook reference) | Human operators |
@@ -55,7 +55,7 @@ These are **suggestions**, not requirements. The skill provides knowledge; workf
 ┌─────────────────────────────────────────────────────────────┐
 │               x-workflows (Execution)                        │
 │  ┌─────────────┐  ┌─────────────┐  ┌─────────────┐         │
-│  │  x-verify   │  │  x-review   │  │ x-implement │  ...    │
+│  │  x-review   │  │  x-fix      │  │ x-implement │  ...    │
 │  │   Agent     │  │   Agent     │  │   Agent     │         │
 │  └──────┬──────┘  └──────┬──────┘  └──────┬──────┘         │
 └─────────┼────────────────┼────────────────┼─────────────────┘

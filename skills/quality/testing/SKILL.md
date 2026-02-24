@@ -15,9 +15,15 @@ metadata:
 
 Comprehensive test strategy following the testing pyramid, with integrated quality gate validation.
 
+<permission-scope mode="adaptive">
+  <allowed>Read, Grep, Glob (test analysis); Bash (test execution: npm test, pnpm test, bun test, pytest)</allowed>
+  <denied>Modifying production code during test-only operations; skipping test execution in CI</denied>
+  <scope>In CI (bypassPermissions): auto-execute full test suite without prompts. In interactive: request permission for Bash test commands.</scope>
+</permission-scope>
+
 ## Enforcement Definitions
 
-Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-commit) to enforce testing standards.
+Violation IDs used by workflow skills (x-implement, x-review, git-commit) to enforce testing standards.
 
 **Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
 

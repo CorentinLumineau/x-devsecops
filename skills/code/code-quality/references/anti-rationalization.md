@@ -1,6 +1,6 @@
 # Anti-Rationalization Reference
 
-> Centralized excuse/reality tables by enforcement category. Referenced by x-implement, x-verify, and x-review hard gates.
+> Centralized excuse/reality tables by enforcement category. Referenced by x-implement and x-review hard gates.
 
 ## Why This Reference Exists
 
@@ -98,7 +98,7 @@ Before proceeding past ANY gate, ask yourself these 5 questions:
 
 This reference is loaded on demand by:
 - `x-implement` — TDD hard gate (Phase 2)
-- `x-verify` — Coverage hard gate (Phase 3)
+- `x-review` — Coverage hard gate (Phase 2)
 - `x-review` — Approval hard gate (Phase 3)
 
 Each skill's Critical Rules section includes a cross-reference:

@@ -114,7 +114,7 @@ Use the testing skill to review my test coverage.
 
 ### With Workflow Skills
 
-x-devsecops skills provide domain knowledge that workflow skills (from x-workflows) reference during execution. For example, x-verify references the `testing` skill for quality gates.
+x-devsecops skills provide domain knowledge that workflow skills (from x-workflows) reference during execution. For example, x-review references the `testing` skill for quality gates.
 
 ## Structure
 
@@ -144,7 +144,8 @@ x-devsecops/
 │   ├── operations/
 │   │   └── sre-operations/
 │   ├── meta/
-│   │   └── analysis-architecture/
+│   │   ├── analysis-architecture/
+│   │   └── persuasion-principles/
 │   ├── data/
 │   │   ├── data-persistence/
 │   │   └── messaging/
@@ -162,7 +163,7 @@ Knowledge skills are referenced by workflow skills:
 
 | Workflow Skill | Knowledge Skills Used |
 |----------------|----------------------|
-| x-verify | testing |
+| x-review | testing, code-quality |
 | x-implement | code-quality, design-patterns |
 | x-review | secure-coding, code-quality |
 | x-troubleshoot | debugging-performance, sre-operations |

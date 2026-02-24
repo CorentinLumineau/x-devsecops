@@ -17,7 +17,7 @@ Reusable solutions to common software design problems.
 
 ## Enforcement Definitions
 
-Violation IDs used by workflow skills (x-implement, x-verify, x-review, git-commit) to enforce design pattern standards.
+Violation IDs used by workflow skills (x-implement, x-review, git-commit) to enforce design pattern standards.
 
 **Severity Model**: CRITICAL/HIGH = BLOCK (must fix), MEDIUM = WARN (flag to user), LOW = INFO (note).
 
