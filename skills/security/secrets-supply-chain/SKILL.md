@@ -1,13 +1,13 @@
 ---
 name: secrets-supply-chain
 description: Use when managing secrets, securing the software supply chain, or hardening containers. Covers secrets rotation, dependency scanning, and container security.
+version: "1.0.0"
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
   category: security
 ---
 

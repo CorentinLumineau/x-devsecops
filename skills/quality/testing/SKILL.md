@@ -1,13 +1,13 @@
 ---
 name: testing
 description: Use when writing tests, improving coverage, or setting up quality gates. Covers testing pyramid, TDD patterns, and quality gate checks for comprehensive validation.
+version: "1.0.0"
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
   category: quality
 ---
 
@@ -38,6 +38,7 @@ Violation IDs used by workflow skills (x-implement, x-review, git-commit) to enf
 | V-TEST-05 | Test without assertions | CRITICAL | Test functions with no assert/expect/verify calls |
 | V-TEST-06 | Flaky test introduced | CRITICAL | Non-deterministic test (passes/fails inconsistently) |
 | V-TEST-07 | Mocking internal implementation details | MEDIUM | Mocking private methods, testing implementation not behavior |
+| V-TEST-08 | No eval definition before AI-assisted implementation | MEDIUM | AI-generated code without corresponding .claude/evals/ entry |
 
 ### TDD Mandate
 
@@ -106,6 +107,19 @@ Skipping TDD = V-TEST-02 (HIGH -> BLOCK). Write the failing test FIRST, then mak
 4. REPEAT
 ```
 
+## Eval-Driven Development (EDD)
+
+EDD extends TDD for AI-assisted workflows. Write eval definitions before AI generates code.
+
+```
+1. DEFINE: Write eval criteria (.claude/evals/)
+2. RED: Write failing test (TDD)
+3. GREEN: AI implements, run evals + tests
+4. REFACTOR: Improve while keeping evals green
+```
+
+Skipping EDD for AI-assisted code = V-TEST-08 (MEDIUM → WARN).
+
 ## Iterative Fix Loop
 
 When tests fail:
@@ -150,6 +164,7 @@ When tests fail:
 - **For testing pyramid details**: See `references/pyramid.md`
 - **For quality gates**: See `references/quality-gates.md`
 - **For quality gate protocol**: See `references/quality-gate-protocol.md`
+- **For eval-driven development patterns**: See `references/eval-driven-development.md`
 
 ## Related Skills
 

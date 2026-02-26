@@ -1,13 +1,13 @@
 ---
 name: analysis-architecture
 description: Use when making architectural decisions, prioritizing work, or creating ADRs/RFCs. Covers Pareto analysis, trade-off frameworks, and software architecture patterns.
+version: "1.0.0"
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
   category: meta
 ---
 

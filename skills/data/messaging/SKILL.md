@@ -1,13 +1,13 @@
 ---
 name: messaging
 description: Use when implementing message queues or event-driven architectures. Covers patterns for decoupled, scalable systems with async communication.
+version: "1.0.0"
 license: Apache-2.0
 compatibility: Works with Claude Code, Cursor, Cline, and any skills.sh agent.
 allowed-tools: Read Grep Glob
 user-invocable: false
 metadata:
   author: ccsetup contributors
-  version: "1.0.0"
   category: data
 ---
 
