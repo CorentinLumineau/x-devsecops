@@ -200,7 +200,7 @@ For SOLID validation, the code-quality skill invokes x-reviewer agent:
 
 Gates should NEVER be skipped except:
 - `--skip-tests` flag explicitly passed by user
-- User explicitly requests skip via AskUserQuestion
+- User explicitly requests skip via interactive gate (`<workflow-gate>`)
 
 ## References
 
